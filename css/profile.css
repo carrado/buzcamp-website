@@ -1,0 +1,787 @@
+@import url("carrado_header.css");
+
+@import url("carrado_popups.css");
+
+a:hover{
+  color: #FFF;
+}
+
+body
+{
+  font-size: 12px;
+  background-color :#f1f1f1;
+}
+
+.profile
+{
+  cursor: pointer;
+}
+
+.row_container_profile
+{
+  z-index: -1;
+  min-height: 200px;
+}
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+	z-index:1050;
+    background:rgba(0,0,0,0.75);
+    animation: fadeIn 0s linear;
+}
+
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    animation: fadeOut 4s linear;
+}
+
+.popup-close:hover {
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+
+@keyframes fadeIn{from{transform:scale(.7);transition-property:all}to{transform:scale(1);opacity:1}}
+@keyframes fadeOut{from{transform:scale(1);opacity:1}to{transform:scale(.7);transition-property:all}}
+
+
+.loader{
+       width:3em;
+       height:3em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+       margin-top: 65%;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+.loading{
+       width:2em;
+       height:2em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+     .loadiconer{
+       width:2.5em;
+       height:2.5em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #202020;
+       border-bottom: 4px solid #202020;
+       border-right: 4px solid #202020;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+       bottom: 0%;
+       display: none;
+       position: fixed;
+          }
+
+          @keyframes spin-round{
+            0%{transform: rotate(0deg); }
+            100%{transform: rotate(360deg); }
+          }
+
+    @media screen and (min-width : 1200px)
+    {
+      .loadiconer{
+        left: 45%;
+      }
+    }
+
+    @media screen and (max-width : 1200px)
+    {
+      .loadiconer{
+        left: 50%;
+      }
+    }
+
+    @media screen and (min-width : 768px)
+    {
+         #background_cycler {
+           position: relative;
+           width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background:  #676666;
+    }
+    }
+
+    @media screen and (max-width : 768px)
+    {
+         #background_cycler {
+           position: relative;
+           width: 100%;
+      height: 150px;
+      overflow: hidden;
+      background:  #676666;
+    }
+    }
+
+.cover-timeline
+{
+  position: absolute;
+  background-color: transparent;
+}
+
+
+
+
+/**************************************************************MENU BAR CSS*************************************/
+
+@media screen and (min-width: 1200px)
+{
+.menu_bar_fixed
+{
+  position: fixed;
+  width: 14.5%;
+  float: left;
+  margin-top: -15%;
+}
+}
+
+.user_menu
+{
+	background-color:inherit;
+	width:100%;
+	min-height:200px;
+	margin-top:0px;
+}
+
+.menu
+{
+	display:block;
+	list-style:none;
+}
+
+.menu li div
+{
+	color:#202020;
+	padding-top:8px;
+}
+
+.menu li .btn-link
+{
+	color:#202020;
+  margin-left: -25%;
+}
+
+.menu li a
+{
+	text-decoration:none;
+	color:#202020;
+}
+
+#collapseTwo
+{
+ width:130%; margin-left:-21%;
+}
+
+.top-sellers
+{
+  width:100%; height:330px; background-color:#fff;
+  margin-top:-30%;
+}
+
+/*----------------------- Available Online Products Outlet-------------------------------*/
+
+.sales_outlet
+{
+     position: fixed;
+     bottom: 0;
+	 width:16.5%;
+	 background-color:#FFF;
+	   z-index: 1050;
+   border-radius: 6px;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+     left: 5px;
+}
+
+.btn-product
+{
+  color:#202020;
+}
+.btn-product:hover
+{
+  color: #202020;
+}
+.btn-product:active
+{
+  color: #202020;
+}
+
+                /**********************************TIMELINE CSS*************************************/
+
+.timeline-body
+{
+  background-color: inherit;
+}
+
+.timeline-cover
+{
+  min-height: 200px;
+}
+
+@media screen and (min-width : 1100px)
+{
+.cover-photo
+{
+  z-index: 9;
+  margin-top: 1%;
+}
+}
+
+.cover-photo
+{
+	z-index: 9;
+}
+
+.cover-timeline
+{
+  width: 100%;
+}
+
+.cover-photo button
+{
+  float: right;
+  height: 30px;
+	font-size:12px;
+}
+
+.view-cover-photo
+{
+  z-index: 9;
+  margin-top: 1%;
+
+}
+
+.view-cover-photo button
+{
+  float: left;
+  height: 30px;
+	font-size:12px;
+}
+
+
+.profile-pic
+{
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  padding: 8px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 4px solid #FFF;
+  margin-left: 3%;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          z-index: 9;
+}
+
+.overlay {
+  position:absolute;
+  top:92px;
+  background:rgba(0, 0, 0, .6);
+  background-repeat:no-repeat;
+  color: #FFF;
+  width:130px;
+  height:48px;
+  margin-left: -2px;
+  border-radius: 50% / 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+	font-size:small;
+   }
+
+.overlay input.upload
+{
+ position:absolute;
+ top:0;
+ right:0;
+ margin:0;
+ padding:0;
+ font-size:20px;
+ cursor:pointer;
+ opacity:0;
+ filter:alpha(opacity=0);
+}
+
+   @media screen and (min-width : 992px)
+   {
+   .user-name
+   {
+   	font-family: Verdana, Geneva, sans-serif; color:rgba(255,255,255,1);
+   	        text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+   			font-size:50px;
+        text-align: center;
+        z-index: 9;
+   }
+   }
+
+   @media screen and (max-width : 992px)
+   {
+   .user-name
+   {
+   	font-family: Verdana, Geneva, sans-serif; color:rgba(255,255,255,1);
+   	        text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+   			font-size:30px;
+        text-align: center;
+        z-index: 9;
+   }
+   }
+
+
+            /*************************FOR MD DEVICES*******************************/
+
+@media screen and (max-width: 1200px)
+{
+.navigation-links
+{
+  min-height: 60px;
+  background-color: #FFF;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 4px solid #f1f1f1;
+  text-align: left;
+}
+}
+
+/***********************************************FOR LG DEVICES**************************************/
+
+@media screen and (min-width: 1200px)
+{
+.navigation-links
+{
+  min-height: 60px;
+  background-color: #FFF;
+  width: 100%;
+  z-index: 9;
+  border-bottom: 4px solid #f1f1f1;
+}
+}
+
+
+@media screen and (min-width: 1300px)
+{
+.navfix
+{
+  position: fixed;
+  width: 50%;
+  left: 21%;
+  margin-top: -15%;
+}
+}
+
+@media screen and (max-width: 1300px)
+{
+.navfix
+{
+  position: fixed;
+  width: 50%;
+  left: 21%;
+  margin-top: -17%;
+}
+}
+
+@media screen and (max-width: 1200px)
+{
+  .navfix
+  {
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    margin-top: -20%;
+  }
+  }
+
+.navigation-links ul
+{
+	list-style:none;
+}
+
+.navigation-links ul li
+{
+  border-right: 2px solid #f1f1f1;
+  height: 60px;
+  text-align: left;
+  margin-top: -1.5%;
+}
+
+.navigation-links ul li form
+{
+	margin-top:15%;
+}
+
+.navigation-links ul li:last-child
+{
+  border-right: none;
+}
+
+.navigation-links button
+{
+	color:#202020;
+	border:none;
+	background-color:inherit;
+}
+
+@media (min-width: 1200px)
+{
+.timeline{
+  background-color: inherit;
+  width: 90%;
+  margin-left: 5%;
+}
+}
+
+@media (max-width: 1200px)
+{
+.timeline{
+  background-color: inherit;
+  min-height: 700px;
+  width: 100%;
+}
+}
+
+.product_timeline
+{
+  background-color: #FFF;
+  margin-top: 1%;
+  width: 100%;
+}
+.edit_pricetag
+{
+  background-color: inherit;
+  color: #e88337;
+  border: none;
+}
+.deleteproduct
+{
+  background-color: inherit;
+  color: #e88337;
+  border: none;
+}
+
+@media (max-width: 400px)
+{
+.timeline_cover{
+  z-index: 2222;
+  margin-top: -28%;
+}
+}
+
+@media (min-width: 400px)
+{
+.timeline_cover
+{
+  z-index: 2222;
+  margin-top: -15%;
+}
+}
+
+.menu_link
+{
+		border-bottom:3px solid #f1f1f1;
+		background-color:rgba(255,255,255,.5);
+    min-height: 30px;
+    margin-top: -2%;
+    font-weight: bold;
+}
+
+.menu_link ul
+{
+	list-style:none;
+}
+
+.menu_link button
+{
+	color:#202020;
+	border:none;
+	background-color:inherit;
+}
+
+.timeline-cover
+{
+  min-height: 100px;
+}
+
+.timeline-xs
+{
+  min-height: 500px;
+}
+
+.mobile_suggested_partners
+				   {
+					   background-color:inherit;
+					   max-width:100%; min-height: 20px;
+             text-align: center;
+				   }
+
+			.tr_link
+			{
+				text-align:center;
+			}
+.tr_link ul
+{
+	list-style:none;
+}
+
+@media screen and (max-width : 480px)
+{
+	.tr_link
+			{
+				text-align:left;
+			}
+.tr_link ul li
+{
+	display:inline-block; margin:0 0% 0 0%; padding:10; margin-top:5px;
+}
+}
+
+@media screen and (max-width : 992px)
+{
+.tr_link ul li
+{
+	display:inline-block; margin:0 4% 0 0; padding:10; margin-top:5px;
+}
+}
+
+@media screen and (min-width : 992px)
+{
+.tr_link ul li
+{
+	display:inline-block; margin:0 30% 0 0%; padding:10; margin-top:5px;
+}
+.tr_link ul li:last-child{margin-right:0;}
+}
+
+/****************************************Business Partners CSS****************************************/
+
+.friends
+{
+	border-top:2px solid rgba(255,255,255,1);
+}
+
+@media screen and (min-width: 768px) {
+.friends
+{
+	border-top:none;
+  float: right;
+}
+}
+
+
+
+/***************************************************CHECK TRANSACTION ID ***********************************/
+
+#foo
+{
+position: fixed;
+bottom: 0;
+width:17%;
+background-color:#FFF;
+margin-right:5%;
+z-index: 1050;
+border-radius: 6px;
+outline: 0;
+box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+right: 0;
+}
+.btn-transaction
+{
+background-color: inherit;
+border: none;
+}
+.btn-transaction_close
+{
+background-color: inherit;
+border: none;
+}
+
+#transaction_input
+{
+  width: 85%;
+  height: 30px;
+  border: 1px solid #e88337;
+  margin-left: 3%;
+    padding: 6px 12px;
+}
+
+#transaction_input:focus{
+  border-color: #66afe9;
+}
+
+/*****************************************Upload Cover Photo CSS***********************************/
+
+.open-edit-coverphoto
+{
+	display:none;
+	background-color:#FFF;
+	min-height:300px; background-color:#FFF;
+  z-index: 9999;
+   border-radius: 6px;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+ top:18%;
+ left: 8%;
+ -webkit-transform:translate(-50%, -50%);
+ transform: scale(1);
+ animation: fadeIn 2s linear;
+}
+
+.cover-dialog
+{
+  min-height: 70px;
+  font-weight: bold;
+  margin-top: 20%;
+}
+
+.fileUpload input.upload
+{
+position:absolute;
+top:0;
+right:0;
+margin:0;
+padding:0;
+cursor:pointer;
+opacity:0;
+filter:alpha(opacity=0);
+}
+
+
+/******************************************************View Cover Photo CSS**************************************/
+
+.open-view-coverphoto
+{
+	display:none;
+	background-color:#FFF;
+	min-height:300px; background-color:#FFF;
+  z-index: 9999;
+   border-radius: 6px;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+ top:10%;
+ left: 8%;
+ min-height:450px;
+ -webkit-transform:translate(-50%, -50%);
+ transform: scale(1);
+ animation: fadeIn 2s linear;
+}
+
+
+/**********************************************************Edit Profile Photo CSS***********************************/
+
+.open-edit-profilephoto
+{
+	min-height:250px;
+	width:100%;
+  z-index: 9999;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+     background:rgba(0,0,0,0.75);
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.orange
+{
+	background-color: #e88337;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+
+/*******************************************VIEW MY PROFILE/USER'S FOLLOWERS/FOLLOWING USER CSS*********************************/
+
+
+#target
+{
+	background-color:#FFF;
+	margin-left:35%;
+		width:25%;
+	margin-top:15%;
+	min-height:100px;
+	 box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	    border-radius: 6px;
+					padding-top: 3%;
+}
+
+
+#target-chat
+{
+	background-color:#FFF;
+	margin-left:35%;
+		width:25%;
+	margin-top:15%;
+	min-height:100px;
+	 box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	    border-radius: 6px;
+					   		padding-top: 3%;
+}

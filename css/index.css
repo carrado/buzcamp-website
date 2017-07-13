@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("carrado_framework.css");
+
+.product
+{
+	position: fixed;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color:#FFF;
+}
+#phones
+{
+	display:none;
+	height:300px;
+}
+#automobile
+{
+	display:none;
+	height:300px;
+
+}
+#fashion 
+{
+	display:none;
+height:300px;
+}
+#games
+{
+	display:none;
+	height:300px;
+}
+#electronics
+{
+	display:none;
+	height:300px;
+}
+#sports
+{
+	display:none;
+	height:300px;
+}
+#computers
+{
+	display:none;
+	height:300px;
+}
+.div-category{
+	background-color:#FFF;
+	width:80%;
+	height:365px;
+	border-radius:5px;
+	float:left;
+	border:2px solid #eee;
+	margin-top:4%;
+}
+.div-category h2{
+	background-color:inherit;
+	width:100%;
+	height:5%;
+	color:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight:600;
+	text-align:center;
+	text-decoration:underline;
+}
+.div-category ul{
+	list-style:none;
+	border-bottom:1px solid #eee;
+}
+.div-category ul li{
+	height:8%;
+	width:100%;
+	color:#202020;
+	display:block;
+	padding:5px;
+	margin-left:-2%;
+}
+.div-category ul li button{
+	background-color:inherit;
+	border:none;
+	font-size:14px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	cursor:pointer;
+	text-transform:uppercase;
+	width:80%;
+	margin-left:10%;
+}
+.input-group{
+	width:250px;
+}
+.div-advert_container{
+	width:100%;
+	color:#FFF;
+	float:left;
+	margin-top:2%;
+	overflow: hidden;
+	}
+	.jR3DCarouselGallery{ 
+
+}
+.div-currency_exchange{
+	background-color:inherit;
+	width:80%;
+	height:365px;
+	margin-top:4%;
+	border:2px solid #eee;
+	border-radius:5px;
+}
+.div-currency_exchange h2{
+	background-color:inherit;
+	width:100%;
+	height:5%;
+	color:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight:600;
+	text-align:center;
+	text-decoration:underline;
+}
+.btn
+{
+	background-color:#202020;
+}
+.cancel
+{
+	background-color:#FFF;
+}
+.order
+{
+	background-color:#FFF;
+	content: "\e116";
+}
+.order:hover
+{
+	background-color:#ddd;
+	content: "\e116";
+}
+.cancel:hover
+{
+	background-color:#ddd;
+}
+.error
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.error1
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.error2
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.error3
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.error4
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.error5
+{
+	display:none;
+	color:#667766;
+	font-size:90%;
+}
+.profile{
+	display:none;
+}
+.business{
+	display:none;
+}
+.login-caption
+{
+color:#999;
+}
+.input
+{
+	width:80%;
+	margin-left:10%;
+}
+.error_exchange
+{
+	display:none;
+
+}
+.exchange_success
+{
+	display:none;
+}
+.div-sign_up
+{
+		display:none;
+	box-shadow:1px #FFF;
+	background-color:#FFF;
+	margin-top:1%;
+}
+.div-product_catalog h2{
+	background-color:inherit;
+	width:100%;
+	height:5%;
+	color:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight:600;
+	text-align:center;
+	text-decoration:underline;
+}
+.loading {
+	margin-left:45%;
+	background:url(../img/preloader.gif) no-repeat 1px; 
+	height:28px; 
+	width:28px; 
+	display:none;
+}
+.error_1 {
+	font-family:arial;
+	font-size:100%; 
+	width:70%; 
+	display:none;
+	margin:0 auto;
+	background-color:#FFF;
+	text-align:center;
+}
+
+.error_2 {
+	font-family:arial;
+	font-size:100%; 
+	width:70%; 
+	display:none;
+	margin:0 auto;
+	background-color:#FFF;
+	text-align:center;
+}
+
+.error_3 {
+	font-family:arial;
+	font-size:100%; 
+	width:70%; 
+	display:none;
+	margin:0 auto;
+	background-color:#FFF;
+	text-align:center;
+}
+figure
+{
+	 border-bottom:2px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+figure
+{
+	
+	 border-bottom:none;
+}
+#order
+{
+	display:none;
+	height:300px;
+	width:50%;
+	z-index:1111;
+	float:left;
+	border-right:2px solid #eee;
+}
+
+.read
+{
+	border:none;
+	background-color:transparent;
+	cursor:pointer;
+	color:#e88337;
+}

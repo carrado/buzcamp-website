@@ -1,0 +1,74 @@
+@import url("carrado_header.css");
+
+a
+{
+  outline: none;
+}
+
+.btn
+{
+  background-color: #202020;
+
+}
+
+.login
+{
+  border: 2px solid #eee;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.changepassword
+{
+  margin-top:10%;
+  border: 2px solid #eee;
+}
+
+table
+{
+  width: 100%;
+  max-width: 100%;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+/*  border-top: 1px solid #ddd;*/
+}
+
+@media screen and (min-width: 468px) {
+table
+{
+	margin:0 auto;
+	width:70%;
+  max-width: 70%;
+}
+}
+
+.login_error
+{
+  color:#e88337;
+}
+
+.loading{
+       width:2em;
+       height:2em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 1s linear infinite;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }

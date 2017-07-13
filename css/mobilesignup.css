@@ -1,0 +1,37 @@
+@import url("carrado_header.css");
+
+a
+{
+  outline: none;
+  cursor: pointer;
+}
+
+.personal
+{
+  text-align: center;
+  margin-top: 15%;
+}
+
+.organisation
+{
+  text-align: center;
+  margin-top: 18%;
+}
+
+.action_button
+{
+padding: 10px 40px;
+margin: 0px 10px 10px 0px;
+font-family: 'Pacifico', cursive;
+font-size: 14px;
+color: #FFF;
+text-decoration: none;
+margin-top:2%;
+background-color:#e88337;
+}
+
+.action_button:hover
+{
+  color: #FFF;
+  text-decoration: none;
+}

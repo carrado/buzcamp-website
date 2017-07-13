@@ -1,0 +1,61 @@
+.header{
+	background: linear-gradient(to right, #000000, #676666);
+	width:100%;
+	z-index: 9999;
+	position: relative;
+}
+
+.head{
+	background: linear-gradient(to right, #000000, #676666);
+	width:120%;
+	z-index:1111;
+}
+
+.logo{
+	min-height:30px;
+}
+
+
+/*      HANDLING OF LOGO AND SEARCH INPUT FOR DEVICES LESS THAN 768PX   */
+
+@media screen and (max-width: 350px)
+{
+	.xs-logo
+	{
+      width:200%;
+	}
+}
+@media screen and (max-width: 400px)
+{
+#search_box
+{
+	height: 25px;
+	font-size: x-small;
+}
+.search_button
+{
+	height: 25px;
+}
+}
+
+/*      NAVIGATION LINKS FOR DEVICES LESS THAN 768PX    */
+
+@media screen and (min-width: 400px) {
+.mobile_links
+{
+text-align:center;
+}
+}
+
+.mobile_links{
+	width:105%;
+	margin-left:-4%;
+}
+
+.mobile_links ul {list-style:none;}
+.mobile_links ul li {margin:0; text-align:center; color:#FFF; display:inline-table; margin-left:-1%;}
+
+.mobile_links ul li a { text-decoration:none; color:#fff; outline:none; padding:6px;}
+.mobile_links ul li:hover  a,
+.mobile_links ul li .active .active  a{color:#FFFFFF;
+}

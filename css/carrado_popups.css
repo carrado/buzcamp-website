@@ -1,0 +1,251 @@
+/**********************CARRADO POP UPS******************************/
+
+.purchase_request {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+display:none;
+}
+
+
+.notification{
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+display:none;
+}
+
+#purchase_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+#mpurchase_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+#notification_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+
+#followers_count {
+padding: 3px 7px 3px 7px;
+background:#e88337;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+#following_count {
+padding: 3px 7px 3px 7px;
+background:#e88337;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+#mfollowers_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+
+#mfollowing_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+.following{
+background:inherit;
+color: #e88337;
+margin-left:3%;
+border-radius: 70%;
+position:absolute;
+font-size: 100%;
+}
+.followers{
+background:inherit;
+color: #e88337;
+margin-left:3%;
+border-radius: 70%;
+position:absolute;
+font-size: 100%;
+}
+
+#automobile {
+padding: 3px 7px 3px 7px;
+background-color:#e88337;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+}
+
+#fashion {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#electronics {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#games {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#sports {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#phones {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#computer {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#health {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+#home {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+background-color:#e88337;
+}
+
+.jobnotification {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+display: none;
+}
+
+.jobadvert {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+display: none;
+}
+
+.approvedjobs {
+padding: 3px 7px 3px 7px;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 50%;
+position: absolute;
+font-size: 11px;
+display: none;
+}

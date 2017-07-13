@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("carrado_framework.css");
+
+.btn
+{
+	background-color:transparent;
+}
+.nav.navbar-nav ul li a
+{
+	color:#FFF;
+	text-decoration:none;
+	cursor:pointer;
+}
+.nav.navbar-nav ul li a:hover
+{
+	color:#FFF;
+}
+.navbar.navbar-default
+{
+	border:none;
+	background-color:inherit;
+}
+.nav.navbar-nav ul li .btn-link
+{
+	text-decoration:none;
+	color:#FFF;
+}
+.nav.navbar-nav ul li .btn:hover
+{
+	color:#FFF;
+}
+label
+{
+	text-align:center;
+}
+.fileUpload
+{
+	position:relative;
+	overflow:hidden;
+	margin:10px;
+	margin-top:-4px;
+	margin-left:-15%;
+}
+.fileUpload input.upload
+{
+	position:absolute;
+	top:0;
+	right:0;
+	margin:0;
+	padding:0;
+	font-size:20px;
+	cursor:pointer;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+#uploadFile
+{
+	width:65%;
+	  height: 30px;
+	  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+.newsfeed
+{
+		display:none;
+	box-shadow:1px #FFF;
+	background-color:#FFF;
+	margin-top:1%;
+}
+.comments
+{
+	width:70%;
+	min-height:10px;
+	background-color:inherit;
+}

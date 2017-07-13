@@ -1,0 +1,71 @@
+.header_fn
+{
+  background-color: #FFF;
+}
+
+.header{
+	background: linear-gradient(to right, #000000, #676666);
+	width:100%;
+	z-index:1111;
+}
+
+.head{
+	background: linear-gradient(to right, #000000, #676666);
+	width:120%;
+	z-index:1111;
+}
+.logo{
+	min-height:30px;
+}
+
+.nav-links{
+	background-color:inherit;
+	color:#202020;
+	border:none;
+}
+
+.navbar-nav ul li
+{
+	display:inline-block;
+}
+
+@media screen and (min-width: 400px) {
+.nav-links{
+	background-color:inherit;
+	color:#202020;
+	border:none;
+	text-align:center;
+}
+}
+
+             /*               Navigation Links for home page            */
+
+.nav.navbar-nav ul li a
+{
+	color:#202020;
+	text-decoration:none;
+	cursor:pointer;
+	outline:none;
+}
+.nav.navbar-nav ul li a:hover
+{
+	color:#202020;
+}
+.navbar.navbar-default
+{
+	border:none;
+	background-color:inherit;
+}
+.nav.navbar-nav ul li .btn-link_home
+{
+  outline:none;
+  border:none;
+	text-decoration:none;
+	color:#202020;
+  background-color:inherit;
+}
+.nav.navbar-nav ul li .btn-link_home:hover
+{
+  border-bottom: 1px solid #E88837;
+	color: #E88837;
+}

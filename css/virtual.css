@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("carrado_header.css");
+@import url("carrado_popups.css");
+
+
+a:hover{
+  color: #FFF;
+}
+
+body
+{
+  font-size: 12px;
+  background-color :#f1f1f1;
+}
+
+.profile
+{
+  cursor: pointer;
+}
+
+.row_container_profile
+{
+  z-index: -1;
+  min-height: 200px;
+}
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+	z-index:1050;
+    background:rgba(0,0,0,0.75);
+    animation: fadeIn 0s linear;
+}
+
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    animation: fadeOut 4s linear;
+}
+
+.popup-close:hover {
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+
+@keyframes fadeIn{from{transform:scale(.7);transition-property:all}to{transform:scale(1);opacity:1}}
+@keyframes fadeOut{from{transform:scale(1);opacity:1}to{transform:scale(.7);transition-property:all}}
+
+.loading{
+       width:2em;
+       height:2em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+
+
+            /**************************************************************MENU BAR CSS*************************************/
+
+@media screen and (min-width: 1200px)
+{
+.menu_bar_fixed
+{
+  position: fixed;
+  width: 14.5%;
+  float: left;
+  margin-top: 0%;
+}
+}
+
+.user_menu
+{
+	background-color:inherit;
+	width:100%;
+	min-height:200px;
+	margin-top:0px;
+}
+
+.menu
+{
+	display:block;
+	list-style:none;
+}
+
+.menu li div
+{
+	color:#202020;
+	padding-top:8px;
+}
+
+.menu li .btn-link
+{
+	color:#202020;
+  margin-left: -25%;
+}
+
+.menu li a
+{
+	text-decoration:none;
+	color:#202020;
+}
+
+.panel-body ul li
+{
+	padding:4%;
+	text-decoration:underline;
+	color:#e88337;
+	text-align:center;
+	list-style:none;
+}
+
+.fashion_icon
+{
+  background:url(http://localhost/Carrado/img/fashion.jpg) left no-repeat;
+}
+.automobile_icon
+{
+ background:url(http://localhost/Carrado/img/car.gif) left no-repeat;
+}
+.sports_icon
+{
+ background:url(http://localhost/Carrado/img/sports.gif) left no-repeat;
+}
+.phones_icon
+{
+ background:url(http://localhost/Carrado/img/mobile-phone.gif) left no-repeat;
+}
+.games_icon
+{
+ background:url(http://localhost/Carrado/img/games.gif) left no-repeat;
+}
+.electronics_icon
+{
+ background:url(http://localhost/Carrado/img/gadgets.gif) left no-repeat;
+}
+.computer_icon
+{
+ background:url(http://localhost/Carrado/img/computer.gif) left no-repeat;
+}
+
+
+
+
+
+       /**************************************************PRODUCTS DISPLAY CSS***************************************/
+	   
+	.productdisplay
+	{
+		background-color:#FFF;
+		min-height:1200px;
+	}
+	
+	.productdisplay h4{
+	background-color:none;
+	width:100%;
+	height:5%;
+	color:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight:600;
+	text-align:center;
+	text-decoration:underline;
+}
+
+	
+	
+	
+	
+	/***************************************************CATEGORIES CSS**********************************************/
+	
+	@media screen and (min-width: 1200px)
+{
+.categories_display_fixed
+{
+  position: fixed;
+  width: 14.5%;
+  float:left;
+  margin-top: -10%;
+}
+}
+
+.categories-list
+{
+	background-color:inherit;
+	width:100%;
+	min-height:200px;
+	margin-top:0px;
+}
+
+.categories
+{
+	display:block;
+	list-style:none;
+}
+
+.categories li
+{
+	padding:14%;
+	text-align:center;
+	list-style:none;
+	margin-left: -10%;
+}
+
+.categories li a
+{
+	color:#202020;
+}
+
+.categories li a:hover
+{
+	border-bottom:1px solid #e88337;
+	font-weight:bold;
+}
+
+a:hover
+{
+	text-decoration:none;
+}

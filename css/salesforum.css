@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("carrado_header.css");
+
+@import url("carrado_popups.css");
+
+a:hover{
+  color: #FFF;
+}
+
+body
+{
+  font-size: 12px;
+  background-color :#f1f1f1;
+}
+
+.sell
+{
+  cursor: pointer;
+}
+
+
+.row_container_salesforum
+{
+  z-index: -1;
+  min-height: 200px;
+}
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+	z-index:1050;
+    background:rgba(0,0,0,0.75);
+    animation: fadeIn 0s linear;
+}
+
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    animation: fadeOut 4s linear;
+}
+
+.popup-close:hover {
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+
+@keyframes fadeIn{from{transform:scale(.7);transition-property:all}to{transform:scale(1);opacity:1}}
+@keyframes fadeOut{from{transform:scale(1);opacity:1}to{transform:scale(.7);transition-property:all}}
+
+
+.loader{
+       width:3em;
+       height:3em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+       margin-top: 65%;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+.loadicon{
+       width:1.4em;
+       height:1.4em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+	 .loading{
+       width:2em;
+       height:2em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+     .loadiconer{
+            width:2.5em;
+            height:2.5em;
+            border-radius: 50%;
+            border: 4px solid #ccc;
+            border-top: 4px solid #202020;
+            border-bottom: 4px solid #202020;
+            border-right: 4px solid #202020;
+            border-left: 4px solid #DDD;
+            animation: spin-round 2s linear infinite;
+            margin: 0 auto;
+            bottom: -10%;
+            left : 36%;
+            display: none;
+          }
+
+          @keyframes spin-round{
+            0%{transform: rotate(0deg); }
+            100%{transform: rotate(360deg); }
+          }
+
+
+.dropdown-menu
+{
+	min-height:40px;
+}
+
+
+
+
+
+/**************************************************************MENU BAR CSS*************************************/
+
+@media screen and (min-width: 1200px)
+{
+.menu_bar_fixed
+{
+  position: fixed;
+  width: 14.5%;
+  float: left;
+  margin-top: 0%;
+}
+}
+
+.user_menu
+{
+	background-color:inherit;
+	width:100%;
+	min-height:200px;
+	margin-top:0px;
+}
+
+.menu
+{
+	display:block;
+	list-style:none;
+}
+
+.menu li div
+{
+	color:#202020;
+	padding-top:8px;
+}
+
+.menu li .btn-link
+{
+	color:#202020;
+  margin-left: -25%;
+}
+
+.menu li a
+{
+	text-decoration:none;
+	color:#202020;
+}
+
+.panel-body ul
+{
+  list-style: none;
+}
+
+.panel-body ul li
+{
+  padding: 5px;
+  color: #e88337;
+  margin-left: 2%;
+}
+
+.fashion_icon
+{
+  background:url(http://localhost/Carrado/img/fashion.jpg) left no-repeat;
+   background-size:15px;
+}
+.automobile_icon
+{
+ background:url(http://localhost/Carrado/img/car.gif) left no-repeat;
+  background-size:15px;
+}
+.sports_icon
+{
+ background:url(http://localhost/Carrado/img/sports.gif) left no-repeat;
+ background-size:15px;
+}
+.phones_icon
+{
+ background:url(http://localhost/Carrado/img/mobile-phone.gif) left no-repeat;
+  background-size:15px;
+}
+.games_icon
+{
+ background:url(http://localhost/Carrado/img/games.gif) left no-repeat;
+  background-size:15px;
+}
+.electronics_icon
+{
+ background:url(http://localhost/Carrado/img/gadgets.gif) left no-repeat;
+  background-size:15px;
+}
+.computer_icon
+{
+ background:url(http://localhost/Carrado/img/computer.gif) left no-repeat;
+  background-size:15px;
+}
+
+          /***********************************TIMELINE CSS*****************************/
+
+.timeline-cover
+{
+}
+
+.timeline-display
+{
+  width:100%; min-height: 300px; margin-top:1%; border-bottom:2px solid #eee; background-color:#fff;
+}
+
+.viewxs{
+  margin-top: 1%; background-color: #FFF; border: none;
+  color: #e88337;
+  font-weight: bold;
+}
+
+          /*****************************SPONSORED AD************************************/
+
+.sponsoredad
+{
+  position: fixed;
+  margin-left: 83%;
+  margin-top: 3.5%;
+}
+
+#target
+{
+	background-color:#FFF;
+	margin-left:35%;
+		width:25%;
+	margin-top:15%;
+	min-height:100px;
+	 box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	    border-radius: 6px;
+					   		padding-top: 3%;
+}

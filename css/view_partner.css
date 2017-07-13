@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("carrado_header.css");
+@import url("carrado_popups.css");
+
+
+body
+{
+  font-size: 12px;
+  background-color :#f1f1f1;
+}
+
+a:hover{
+  color: #FFF;
+}
+
+.row_container_partner
+{
+  z-index: -1;
+  min-height: 700px;
+}
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+	z-index:1050;
+    background:rgba(0,0,0,0.75);
+    animation: fadeIn 0s linear;
+}
+
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    animation: fadeOut 4s linear;
+}
+
+.popup-close:hover {
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+
+@keyframes fadeIn{from{transform:scale(.7);transition-property:all}to{transform:scale(1);opacity:1}}
+@keyframes fadeOut{from{transform:scale(1);opacity:1}to{transform:scale(.7);transition-property:all}}
+
+
+.loading{
+       width:2em;
+       height:2em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #bbb;
+       border-bottom: 4px solid #bbb;
+       border-right: 4px solid #bbb;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+     }
+
+     @keyframes spin-round{
+       0%{transform: rotate(0deg); }
+       100%{transform: rotate(360deg); }
+     }
+
+
+     .loadiconer{
+       width:2.5em;
+       height:2.5em;
+       border-radius: 50%;
+       border: 4px solid #ccc;
+       border-top: 4px solid #202020;
+       border-bottom: 4px solid #202020;
+       border-right: 4px solid #202020;
+       border-left: 4px solid #DDD;
+       animation: spin-round 2s linear infinite;
+       margin: 0 auto;
+       position: fixed;
+       bottom: -10%;
+          }
+
+          @keyframes spin-round{
+            0%{transform: rotate(0deg); }
+            100%{transform: rotate(360deg); }
+          }
+
+    @media screen and (min-width : 1200px)
+    {
+      .loadiconer{
+        left: 47%;
+      }
+    }
+
+    @media screen and (max-width : 1200px)
+    {
+      .loadiconer{
+        left: 50%;
+      }
+    }
+
+@media screen and (min-width : 768px)
+{
+     #background_cycler {
+       position: relative;
+       width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background:  #676666;
+}
+}
+
+@media screen and (max-width : 768px)
+{
+     #background_cycler {
+       position: relative;
+       width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background:  #676666;
+}
+}
+
+.cover-timeline
+{
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+}
+
+
+.profile-pic
+{
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  padding: 8px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 4px solid #FFF;
+  margin-left: 3%;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          z-index: 9;
+}
+
+@media screen and (min-width : 1100px)
+{
+.followpartner
+{
+  z-index: 9;
+  margin-top: 1%;
+  display: none;
+}
+}
+
+.followpartner
+{
+	z-index: 9;
+  display:none;
+}
+
+.followpartner button
+{
+  float: right;
+  height: 30px;
+	font-size:13px;
+}
+
+@media screen and (min-width : 1100px)
+{
+.unfollowpartner
+{
+  z-index: 9;
+  margin-top: 1%;
+  display: none;
+}
+}
+
+.unfollowpartner
+{
+	z-index: 9;
+  display:none;
+}
+
+.unfollowpartner button
+{
+  float: right;
+  height: 30px;
+	font-size:13px;
+}
+
+@media screen and (min-width : 992px)
+{
+.user-name
+{
+ font-family: Verdana, Geneva, sans-serif; color:rgba(255,255,255,1);
+         text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+     font-size:50px;
+     text-align: center;
+     z-index: 9;
+}
+}
+
+@media screen and (max-width : 992px)
+{
+.user-name
+{
+ font-family: Verdana, Geneva, sans-serif; color:rgba(255,255,255,1);
+         text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+     font-size:30px;
+     text-align: center;
+     z-index: 9;
+}
+}
+
+
+.timeline-body
+{
+  background-color: inherit;
+}
+
+
+@media (min-width: 1200px)
+{
+.timeline{
+  background-color: inherit;
+  width: 90%;
+  margin-left: 9%;
+}
+}
+
+@media (max-width: 1200px)
+{
+.timeline{
+  background-color: inherit;
+  min-height: 700px;
+  width: 100%;
+}
+}
+
+.display-timeline
+{
+  min-height: 200px;
+}
+
+/******TIMELINE_COVER CLASS FOR XS DEVICES*****/
+
+@media (max-width: 500px)
+{
+.timeline_cover{
+  z-index: 2222;
+  margin-top: -18%;
+}
+}
+
+@media (min-width: 500px)
+{
+.timeline_cover{
+  z-index: 2222;
+  margin-top: -8%;
+}
+}
+
+/*************************FOR MD DEVICES (CLASS navigation-links)*******************************/
+
+@media screen and (max-width: 1200px)
+{
+.navigation-links
+{
+min-height: 60px;
+background-color: #FFF;
+width: 100%;
+z-index: 2;
+border-bottom: 4px solid #f1f1f1;
+text-align: left;
+}
+}
+
+/***********************************************FOR LG DEVICES (CLASS navigation-links)**************************************/
+
+@media screen and (min-width: 1200px)
+{
+.navigation-links
+{
+min-height: 60px;
+background-color: #FFF;
+width: 100%;
+z-index: 9;
+border-bottom: 4px solid #f1f1f1;
+}
+}
+
+
+@media screen and (max-width: 1300px)
+{
+.navfix
+{
+position: fixed;
+width: 50%;
+left: 23%;
+margin-top: -17%;
+}
+}
+
+@media screen and (min-width: 1300px)
+{
+  .navfix
+  {
+    position: fixed;
+    width: 50%;
+    left: 23%;
+    margin-top: -15%;
+  }
+  }
+
+.navigation-links ul
+{
+list-style:none;
+}
+
+.navigation-links ul li
+{
+border-right: 2px solid #f1f1f1;
+height: 60px;
+text-align: left;
+margin-top: -0.9%;
+}
+
+.navigation-links ul li form
+{
+margin-top:15%;
+}
+
+.navigation-links ul li:last-child
+{
+border-right: none;
+}
+
+.navigation-links button
+{
+color:#202020;
+border:none;
+background-color:inherit;
+}
+
+@media screen and (max-width: 768px)
+{
+  .navigation-links ul li
+  {
+  border-right: 2px solid #f1f1f1;
+  height: 40px;
+  }
+
+}
+
+.product_timeline
+{
+  background-color: #FFF;
+  margin-top: 1%;
+  width: 100%;
+  position: relative;
+}
+
+.profile_table td
+{
+  width: 50%;
+}
+ .profile_table > thead > tr > th,
+.profile_table > tbody > tr > th,
+.profile_table > tfoot > tr > th,
+.profile_table > thead > tr > td,
+.profile_table > tbody > tr > td,
+.profile_table > tfoot > tr > td {
+  padding: 15px;
+  line-height: 1.42857143;
+  margin-left: 2%;
+}
+
+.viewxs{
+  margin-top: 1%; background-color: #FFF; border: none;
+  color: #e88337;
+  font-weight: bold;
+}
+
+#target
+{
+	background-color:#FFF;
+	margin-left:35%;
+		width:25%;
+	margin-top:15%;
+	min-height:100px;
+	 box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	    border-radius: 6px;
+					padding-top: 3%;
+}

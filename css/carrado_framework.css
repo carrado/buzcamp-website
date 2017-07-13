@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Extra small devices (phones, less than 768px) */ 
+/* No media query since this is the default in Bootstrap */  
+/* Small devices (tablets, 768px and up) */ 
+@media (min-width: @screen-sm-min) { ... }  
+/* Medium devices (desktops, 992px and up) */ 
+@media (min-width: @screen-md-min) { ... }  
+/* Large devices (large desktops, 1200px and up) */ 
+@media (min-width: @screen-lg-min) { ... } 
+@media (max-width: @screen-xs-max) { ... } 
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... } 
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... } 
+@media (min-width: @screen-lg-min) { ... } 
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... } 
+
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+.row_container
+{
+	background-color:#dddddd;
+
+}
+
+.header{
+	background: linear-gradient(to right, #000000, #676666);
+	width:100%;
+	z-index:1111;
+}
+.logo{
+	min-height:30px;
+
+	
+}
+
+.nav-links{
+	background-color:inherit;
+	color:#202020;
+	border:none;
+
+}
+
+.nav.navbar-nav ul li a
+
+{
+	margin-left:1%;
+	
+}
+.nav.navbar-nav ul li a
+{
+	color:#202020;
+	text-decoration:none;
+	cursor:pointer;
+}
+.nav.navbar-nav ul li a:hover
+{
+	color:#202020;
+}
+.navbar.navbar-default
+{
+	border:none;
+	background-color:inherit;
+}
+.nav.navbar-nav ul li .btn-link
+{
+	text-decoration:none;
+	color:#202020;
+}
+.nav.navbar-nav ul li .btn:hover
+{
+	color:#202020;
+}
+
+
+#purchase_request {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+#notification{
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+#job_alert {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+#job_count{
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+
+#purchase_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+#notification_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+
+
+#followers_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+
+#following_count {
+padding: 3px 7px 3px 7px;
+background:#202020;
+color: #ffffff;
+margin-left:3%;
+font-weight: bold;
+border-radius: 9px;
+position: absolute;
+font-size: 11px;
+}
+#following{
+background:inherit;
+color: #202020;
+margin-left:3%;
+font-weight: bold;
+border-radius: 70%;
+position:absolute;
+font-size: 100%;
+}
+#followers{
+background:inherit;
+color: #202020;
+margin-left:3%;
+font-weight: bold;
+border-radius: 70%;
+position:absolute;
+font-size: 100%;
+}
+
