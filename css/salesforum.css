@@ -215,41 +215,6 @@ body
   margin-left: 2%;
 }
 
-.fashion_icon
-{
-  background:url(http://localhost/Carrado/img/fashion.jpg) left no-repeat;
-   background-size:15px;
-}
-.automobile_icon
-{
- background:url(http://localhost/Carrado/img/car.gif) left no-repeat;
-  background-size:15px;
-}
-.sports_icon
-{
- background:url(http://localhost/Carrado/img/sports.gif) left no-repeat;
- background-size:15px;
-}
-.phones_icon
-{
- background:url(http://localhost/Carrado/img/mobile-phone.gif) left no-repeat;
-  background-size:15px;
-}
-.games_icon
-{
- background:url(http://localhost/Carrado/img/games.gif) left no-repeat;
-  background-size:15px;
-}
-.electronics_icon
-{
- background:url(http://localhost/Carrado/img/gadgets.gif) left no-repeat;
-  background-size:15px;
-}
-.computer_icon
-{
- background:url(http://localhost/Carrado/img/computer.gif) left no-repeat;
-  background-size:15px;
-}
 
           /***********************************TIMELINE CSS*****************************/
 
@@ -259,7 +224,7 @@ body
 
 .timeline-display
 {
-  width:100%; min-height: 300px; margin-top:1%; border-bottom:2px solid #eee; background-color:#fff;
+  width:100%; min-height: 340px; margin-top:1%; border-bottom:2px solid #eee; background-color:#fff;
 }
 
 .viewxs{

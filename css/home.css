@@ -152,14 +152,12 @@ button{
 
  .display-box{
    position: relative;
-   width: 210px;
 	min-height: 222px;
 	display: inline-block;
 	vertical-align: top;
 	background: #ffffff;
 	margin-top: 1px;
 	font-family: calibri;
-  margin-left:3%;
   float:left;
   box-shadow: 2px 2px 2px 2px #ddd;
   text-align: center;

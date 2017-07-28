@@ -36,6 +36,9 @@ $(document).ready(function()
 {
 	$(window).scrollTop(0);// this scrolls the page to the top when user refreshes his/her browser
 
+if(window.innerWidth >= 1200)
+{
+
   $(window).scroll(function () {
 
     var abs = $(window).scrollTop();
@@ -50,6 +53,7 @@ $(document).ready(function()
 			}
 		}
 	})
+}
 });
 
 

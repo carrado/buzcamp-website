@@ -431,8 +431,8 @@ function load_content(track_page)
 
 			 $.ajax({
 				 type: 'POST',
-			 url: url+'salesforum/sales_timeline',
-			 data: {'page': track_page},
+			 url: url+'salesforum/sales_timeline/'+track_page,
+			 data: track_page,
 			 dataType: "html",
 			 beforeSend: function()
 			 {
@@ -445,6 +445,7 @@ function load_content(track_page)
 				 $(".loadiconer").hide();
 
 					 $(".timeline-cover").append(data);
+
 			 }
 
 			 })
