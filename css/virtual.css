@@ -5,6 +5,12 @@
 @import url("carrado_popups.css");
 @import url("icons.css");
 
+.icon
+{
+  float: left;
+  font-size: 1.5em;
+}
+
 a:hover{
   color: #FFF;
 }
@@ -24,6 +30,49 @@ body
 {
   z-index: -1;
   min-height: 200px;
+}
+
+
+.category_list
+{
+	list-style:none;
+}
+
+.category
+{
+  margin-top: -1%;
+}
+
+.category li
+{
+	display: inline-block;
+	width: 25%;
+	background-color: inherit;
+	text-align: center;
+	padding:1%;
+  margin-left: 0%;
+  margin-top: 1%;
+	height: 50px;
+	border-right:1px solid rgba(255,204,0,.5);
+  font-size: small;
+  float: left;
+}
+
+.category_list a
+{
+  color: #202020;
+  font-weight: bold;
+  outline: none;
+}
+
+.category_list a:hover
+{
+ border-bottom: 1px solid #e88337;
+}
+
+.panel-body ul li span
+{
+  color: #202020;
 }
 
 /* Outer */
@@ -124,7 +173,11 @@ body
     .dropdown-menu
     {
       text-align: center;
+<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
       font-size: 90%;
+=======
+      font-size: 100%;
+>>>>>>> Update
     }
 
      .dropdown-menu li div
@@ -132,13 +185,26 @@ body
      	color:#202020;
      	padding-top:8px;
      }
+<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
+
+     .dropdown-menu li .btn-link
+     {
+     	color:#202020;
+     }
+=======
+>>>>>>> Update
 
      .dropdown-menu li .btn-link
      {
      	color:#202020;
      }
 
-
+  .label-uploadfile
+  {
+    font-weight: normal;
+    margin-top: -10%;
+    cursor: pointer;
+  }
 
             /**************************************************************MENU BAR CSS*************************************/
 
@@ -195,6 +261,7 @@ body
 	text-decoration:underline;
 }
 
+<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
 
 
 
@@ -207,47 +274,64 @@ body
  left: 82%;
  margin-top: 3.5%;
 }
+=======
+>>>>>>> Update
 
-.categories-list
+a:hover
 {
-	background-color:inherit;
-	width:100%;
-	min-height:200px;
-	margin-top:0px;
+	text-decoration:none;
 }
 
-.categories
+
+
+.animate
 {
-	display:block;
-	list-style:none;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 }
 
-.categories li
+.action-button
 {
-	padding:14%;
-	text-align:center;
-	list-style:none;
-	margin-left: -10%;
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
 }
 
+<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
 .categories li span
 {
   float: left;
 }
 
 .categories li a
+=======
+.orange
+>>>>>>> Update
 {
-	color:#202020;
+	background-color: #e88337;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
 }
 
-.categories li a:hover
+.viewxs
 {
-	border-bottom:1px solid #e88337;
-	font-weight:bold;
+	color: #e88337;
+	font-size: 12px;
+  border: none;
+  background-color: inherit;
 }
 
-a:hover
+
+
+
+#target
 {
+<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
 	text-decoration:none;
 }
 
@@ -256,6 +340,10 @@ a:hover
 {
 	background-color:#FFF;
 	margin-left:35%;
+=======
+	background-color:#FFF;
+	margin-left:37%;
+>>>>>>> Update
 		width:25%;
 	margin-top:15%;
 	min-height:100px;

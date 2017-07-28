@@ -9,7 +9,7 @@ $('.header_fn').scrollToFixed();
 
 });
 
-/*      Function to disappear and appear left-bar-categories and right-bar-categories     */
+/*      Function to disappear and appear left-bar-categories and right-bar-categories     *
 
 $(document).ready(function()
 {
@@ -32,116 +32,69 @@ $(document).ready(function()
 });
 
 })
+*/
 
-
-                 /*  Function for sliders for XS and SM Devices  */
+                 /*  Function for sliders for XS and SM Devices */
 
                  $(document).ready(function(){
                   $('.bxslider').bxSlider();
                 });
 
 
+                /*******************************CATEGORIES SLIDER*************/
+                $(function()
+                {
+                	$(".category").excoloSlider({
+
+                		interval: 5000,
+
+                	});
+                })
 
 
-          $(document).ready(function()
-          {
-            $(".close_login").click(function()
-            {
-            				var bPopup = $('.login_result').bPopup();
-            bPopup.close();
-            				$(document).html();
-                  })
-            			});
 
 
      /*    FUNCTION TO PROCESS MY PROFILE WHEN CLICKED, SALES FORUM WHEN CLICKED AND LOGIN         */
 
 
+         //THIS PROCESSES LOGIN BY USER
      $(document).ready(function(){
-$("#login").submit(function(){
+$("#login").submit(function(e){
 
-$.post(url+"login_ctrl/index",
-{ username: $("#username").val(), password: $("#password").val() },
-function(data){
-	if(data == 1)
+$.ajax({
+ type: 'POST',
+ url: url+"login_ctrl/index",
+ data: $(this).serialize(),
+ beforeSend: function()
  {
-   window.location.href= url+"profile/index";
- }
- else if(data == 2)
+   $(".login_error").show();
+   $('.login_error').html("<div class='loading'></div>");
+ },
+ success: function(data)
  {
-   window.location.href= url+"virtual_account/index";
+   if(data == 1)
+   {
+     window.location.href=url+"profile/index";
+   }
+   else if(data == 2)
+   {
+     window.location.href=url+"virtual_account/index";
+   }
+   else if((data != 1) && (data != 2))
+   {
+   $(".login_error").html(data);
+   $(".login_error").delay(7000).fadeOut();
  }
- else 
- {
- $('.login_result').modal();
- $('.login_error').html(data);
  }
- })
-return false;
-}
-)
- }
- )
-
-//using ajax in directing user to his/her profile
-$(document).ready(function(){
-$("#profile_validate").submit(function(){
-
-$.post(url+"verifylogin/profile_login",
-function(html){
- if(html == 2)
-
- { $("[data-toggle='popover']").popover(); }
-
- else if (html == 1)
- {
-   window.location.href=url+"virtual_account/index";
- }
- else if(html == 3)
- {
-   window.location.href= url+"profile/index";
- }
- })
-return false;
 })
- })
-
-
- //using ajax in directing user to his/her business forum
-$(document).ready(function(){
-$("#sales_validate").submit(function(){
-
- // this tells the server-side process that Ajax was used
-  $('input[name="usingAJAX"]',this).val( 'true' );
-
-$.post(url+"verifylogin/sales_login",
-function(html){
- if(html ==2)
- {
-{ $("[data-toggle='popover']").popover();
-}
- }
- else if (html == 1)
- {
-
-   window.location.href= url+"home_ctrl/uploadimage";
- }
- else if(html==3)
- {
-   window.location.href= url+"salesforum/index";
- }
- })
 return false;
-}
-)
- }
- )
- 
- 
+});
+});
+
  $(document).ready(function(e) {
-    
+
 	$("#passwordrecovery").submit(function(e) {
-        
+
 		$.ajax({
 			type: 'POST',
 			url: url+"home_ctrl/process_change_password",
@@ -159,7 +112,77 @@ return false;
 		return false
     });
 });
- 
- 
+
+
+
+
+/*****************************INITIALIZE POP UP BOXES**************************/
+
+$(document).ready(function()
+{
+//----- OPEN
+$('[data-popup-open]').on('click', function(e)  {
+ var targeted_popup_class = jQuery(this).attr('data-popup-open');
+ $('[data-popup="' + targeted_popup_class + '"]').fadeIn();
+
+ e.preventDefault();
+});
+
+//----- CLOSE
+$('[data-popup-close]').on('click', function(e)  {
+ var targeted_popup_class = jQuery(this).attr('data-popup-close');
+ $('[data-popup="' + targeted_popup_class + '"]').fadeOut();
+
+ e.preventDefault();
+});
+});
+
+
+
+/***************TO VIEW AND ORDER FOR LISTED PRODUCTS/ACTIVITY************/
+
+$(document).ready(function(e) {
+
+$(".view").click(function(e)
+{
+
+ var targeted_popup_class = 'popup-3';
+        $('[data-popup="' + targeted_popup_class + '"]').fadeIn();
+
+        e.preventDefault();
+
+    $.ajax({
+           type: "POST",
+           url: url+"carrado_default/viewproduct",
+           data: $(this).parent().parent().parent().serialize(),
+		   beforeSend: function()
+		   {
+
+							$("#target").html("<div class='loading'></div>");
+
+		   },
+		   success: function(data)
+           {
+
+	            $(".loading").hide();
+
+				if(window.innerWidth < 1200)
+				{
+				$("#target").animate({"height": 560, "width": '91.7%', "margin-top": 10, "margin-left": '5%', "overflow-y": 'scroll'});
+				}
+				else
+				if(window.innerWidth >= 1200)
+				{
+				$("#target").animate({"height": 560, "width": '91.7%', "margin-top": 40, "margin-left": '4%'});
+				}
+           $("#target").html(data);
+		   }
+         });
+
+    return false; // avoid to execute the actual submit of the form.
+});
+});
+
+
 
  var url = "http://localhost/Carrado/index.php/";

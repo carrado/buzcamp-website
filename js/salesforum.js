@@ -182,7 +182,7 @@ $(document).ready(function(e) {
 
 				if(window.innerWidth >= 1200)
 				{
-				$("#target").animate({"height": 600, "width": '50%', "margin-top": 20, "margin-left": '24%'});
+				$("#target").animate({"height": 600, "width": '60%', "margin-top": 20, "margin-left": '20%'});
 				}
 				else if(window.innerWidth < 1200)
 				{
@@ -227,7 +227,7 @@ $(document).ready(function(e) {
 
 				if(window.innerWidth >= 1200)
 				{
-				$("#target").animate({"height": 600, "width": '50%', "margin-top": 20, "margin-left": '24%'});
+				$("#target").animate({"height": 600, "width": '60%', "margin-top": 20, "margin-left": '20%'});
 				}
 				else if(window.innerWidth < 1200)
 				{
@@ -279,47 +279,6 @@ $(document).ready(function(e) {
         });
 
 
-				/******************************************POST JOB ADVERT**********************************/
-
-			 $(document).ready(function(e) {
-
-			 $("#post_job").submit(function(e) {
-
-			 var targeted_popup_class = 'popup-3';
-			 $('[data-popup="' + targeted_popup_class + '"]').fadeIn();
-
-			 e.preventDefault();
-
-			 $.ajax({
-			  type: "POST",
-			  url: url+"jobs/getjobform",
-			  data: $(this).serialize(),
-			  beforeSend: function()
-			  {
-			 	 $("#target").html("<div class='loading'></div>");
-			  },
-
-			  success: function(data)
-			  {
-			 	 $(".loading").hide();
-
-				 if(window.innerWidth >= 1200)
-				 {
-				 $("#target").animate({"height": 600, "width": '50%', "margin-top": 20, "margin-left": '24%'});
-				 }
-				 else if(window.innerWidth < 1200)
-				 {
-				 $("#target").animate({"height": 570, "width": '75%', "margin-top": 20, "margin-left": '14%'});
-				 }
-
-			 	 $("#target").html(data);
-			  }
-
-			 });
-			 return false
-			 	 });
-
-			 });
 
 
                        /*************************************LOAD PURCHASE REQUEST NOTIFICATIONS COUNT***************************/

@@ -71,9 +71,22 @@ a:visited
 	text-align:center;
 }
 
+.form-group label
+{
+  text-align: center;
+}
+
 .create_account
 {
 	min-height:1400px;
+}
+
+@media screen and (max-width: 768px)
+{
+  .create_account
+  {
+  	min-height:1100px;
+  }
 }
 
 .animate
@@ -248,5 +261,3 @@ input[type="radio"]
  transform: scale(1);
  animation: fadeIn 1s linear;
 }
-
-

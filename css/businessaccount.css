@@ -71,6 +71,11 @@ a:visited
 	text-align:center;
 }
 
+.form-group label
+{
+  text-align: center;
+}
+
 .create_business_account
 {
 	min-height:1450px;

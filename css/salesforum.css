@@ -5,6 +5,15 @@
 
 @import url("carrado_popups.css");
 
+@import url("icons.css");
+
+.icon
+{
+  float: left;
+  font-size: 1.5em;
+}
+
+
 a:hover{
   color: #FFF;
 }

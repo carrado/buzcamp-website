@@ -27,6 +27,34 @@ $uploadCrop = $('#upload-demo').croppie({
 
 });
 
+
+/**********************FOR SM, MD DEVICES******************/
+
+$('.uploadButton').on('change', function () {
+
+	var reader = new FileReader();
+
+    reader.onload = function (e) {
+
+    	$uploadCrop.croppie('bind', {
+
+    		url: e.target.result
+
+    	}).then(function(){
+
+    		console.log('jQuery bind complete');
+
+    	});
+
+    }
+
+    reader.readAsDataURL(this.files[0]);
+
+});
+
+
+ /************************FOR LG DEVICES******************/
+
 $('#uploadButton').on('change', function () {
 
 	var reader = new FileReader();
@@ -49,9 +77,13 @@ $('#uploadButton').on('change', function () {
 
 });
 
+
+
 /****************Remove Image On close**************/
 $('.dismiss-profilepic').on('click', function(ev)
 {
+  $(".resulterror").html('');
+
   $uploadCrop.croppie('bind', {
 
     url: ''
@@ -76,6 +108,19 @@ $('.upload-result').on('click', function (ev) {
 	}).then(function (resp) {
 
 
+    if(resp == "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAAbklEQVR4nO3BMQEAAADCoPVPbQsvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgZYDUAAaMExRQAAAAASUVORK5CYII=")
+		{
+			//IF NO IMAGE WAS SELECTED
+
+      $(".resulterror").html("No image was selected");
+
+		}
+
+else
+{
+
+  //IF AN IMAGE WAS SELECTED
+
 		$.ajax({
 
 			url: url+"profile/profilephotoupload",
@@ -90,6 +135,8 @@ $('.upload-result').on('click', function (ev) {
 			}
 
 		});
+
+  }
 
 	});
 
@@ -437,7 +484,7 @@ $(document).ready(function()
 	 $("#cycle").load(""+url+"carrado_default/load_cover/"+username);
 	 var refreshId = setInterval(function()
 {
-	$("#cycle").load(""+url+"carrado_default/load_cover/"+username);}, 16000);
+	$("#cycle").load(""+url+"carrado_default/load_cover/"+username);}, 17000);
 	$.ajaxSetup({ cache:false });
 });
 
@@ -727,7 +774,7 @@ $(document).ready(function(e) {
 
 				if(window.innerWidth >= 1200)
 				{
-				$("#target").animate({"height": 600, "width": '50%', "margin-top": 20, "margin-left": '24%'});
+				$("#target").animate({"height": 600, "width": '60%', "margin-top": 20, "margin-left": '20%'});
 				}
 				else if(window.innerWidth < 1200)
 				{
@@ -772,7 +819,7 @@ $(document).ready(function(e) {
 
 				if(window.innerWidth >= 1200)
 				{
-				$("#target").animate({"height": 600, "width": '50%', "margin-top": 20, "margin-left": '24%'});
+				$("#target").animate({"height": 600, "width": '60%', "margin-top": 20, "margin-left": '20%'});
 				}
 				else if(window.innerWidth < 1200)
 				{

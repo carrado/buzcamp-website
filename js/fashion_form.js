@@ -38,6 +38,8 @@ $('.remaining').each(function(){
 
 					});
 
+
+
           $(document).ready(function()
           {
           	$("#fashionform").submit(function()

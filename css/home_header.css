@@ -56,16 +56,25 @@
 	border:none;
 	background-color:inherit;
 }
-.nav.navbar-nav ul li .btn-link_home
+
+.nav.navbar-nav ul li .signup
 {
-  outline:none;
-  border:none;
-	text-decoration:none;
-	color:#202020;
-  background-color:inherit;
+padding: 8px 40px;
+margin: 0px 10px 10px 0px;
+font-family: 'Pacifico', cursive;
+font-size: 14px;
+color: #FFF;
+text-decoration: none;
+background-color:#e88337;
 }
-.nav.navbar-nav ul li .btn-link_home:hover
+
+.nav.navbar-nav ul li .login
 {
-  border-bottom: 1px solid #E88837;
-	color: #E88837;
+padding: 8px 40px;
+margin: 0px 10px 10px 0px;
+font-family: 'Pacifico', cursive;
+font-size: 14px;
+color: #FFF;
+text-decoration: none;
+background-color:#e88337;
 }

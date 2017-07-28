@@ -54,17 +54,17 @@ email.addClass('highlight');
 return false;
 } else if(email.val() != '')
  {
-	 var emailx = document.getElementById('email'); 
- var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
-    if(!emailx.value.match(mailformat))  
-    {  
-	        email.addClass('highlight'); 
+	 var emailx = document.getElementById('email');
+ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!emailx.value.match(mailformat))
+    {
+	        email.addClass('highlight');
 			   $(".error1").html("Invalid Email Address");
 			   $(".error1").css('color','red');
-			   $(".error1").show(); 
+			   $(".error1").show();
 			   return false;
-    }  
-    else  
+    }
+    else
    {
 	      email.removeClass('highlight');
 			   $(".error1").hide();
@@ -169,7 +169,7 @@ telInput.on("keyup change", reset);
 /*********************************************PROCESS UPLOAD PROFILE PIC*************************************/
 
 $(document).ready(function(e) {
- 
+
 $uploadCrop = $('#upload-demo').croppie({
 
     enableExif: true,
@@ -194,10 +194,10 @@ $uploadCrop = $('#upload-demo').croppie({
 
 });
 
-$('#uploadBtn').on('change', function () { 
+$('#uploadBtn').on('change', function () {
 
   $(".display_photo").fadeIn();
-  
+
 	var reader = new FileReader();
 
     reader.onload = function (e) {
@@ -210,7 +210,7 @@ $('#uploadBtn').on('change', function () {
 
     		console.log('jQuery bind complete');
 
-    	});   	
+    	});
 
     }
 
@@ -228,6 +228,20 @@ $('.upload-result').on('click', function (ev) {
 		size: 'viewport'
 
 	}).then(function (resp) {
+
+
+        if(resp == "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAAbklEQVR4nO3BMQEAAADCoPVPbQsvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgZYDUAAaMExRQAAAAASUVORK5CYII=")
+    		{
+    			//IF NO IMAGE WAS SELECTED
+
+    			window.location.href=url+"signup/personalaccount";
+
+    		}
+
+    else
+    {
+
+      //IF AN IMAGE WAS SELECTED
 
 
 		$.ajax({
@@ -248,10 +262,12 @@ $('.upload-result').on('click', function (ev) {
 		  {
 			  				window.location.href= url+"virtual_account/index";
 		  }
-  
+
 			}
 
 		});
+
+  }
 
 	});
 

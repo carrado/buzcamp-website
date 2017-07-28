@@ -211,7 +211,7 @@ a:hover{
 	font-size:13px;
 }
 
-@media screen and (min-width : 992px)
+@media screen and (min-width : 1200px)
 {
 .user-name
 {
@@ -223,13 +223,13 @@ a:hover{
 }
 }
 
-@media screen and (max-width : 992px)
+@media screen and (max-width : 1200px)
 {
 .user-name
 {
  font-family: Verdana, Geneva, sans-serif; color:rgba(255,255,255,1);
          text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
-     font-size:30px;
+     font-size:35px;
      text-align: center;
      z-index: 9;
 }

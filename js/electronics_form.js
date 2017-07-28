@@ -39,8 +39,6 @@ $('.remaining').each(function(){
 					});
 
 
-
-
           $(document).ready(function()
           {
             $("#electronicsform").submit(function()

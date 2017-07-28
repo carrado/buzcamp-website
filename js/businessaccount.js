@@ -57,24 +57,24 @@ email.addClass('highlight');
 return false;
 } else if(email.val() != '')
  {
-	 var emailx = document.getElementById('email'); 
- var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
-    if(!emailx.value.match(mailformat))  
-    {  
-	        email.addClass('highlight'); 
+	 var emailx = document.getElementById('email');
+ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!emailx.value.match(mailformat))
+    {
+	        email.addClass('highlight');
 			   $(".error1").html("Invalid Email Address");
 			   $(".error1").css('color','red');
-			   $(".error1").show(); 
+			   $(".error1").show();
 			   return false;
-    }  
-    else  
+    }
+    else
    {
 	      email.removeClass('highlight');
 			   $(".error1").hide();
    }
  }
- 
- 
+
+
 if (services1.val()=='') {
 services1.addClass('highlight');
 return false;
@@ -97,8 +97,8 @@ if (password.val()=='') {
 password.addClass('highlight');
 return false;
 } else password.removeClass('highlight');
-	
- 
+
+
    $.ajax({
      method: 'POST',
      url: url+'signup/process_business_signup',
@@ -135,8 +135,8 @@ else if(data == "")
    return false;
  })
 })
-   
-   
+
+
 
         $("#mobile").intlTelInput();
 		$("#mobilex").intlTelInput();
@@ -173,7 +173,7 @@ telInput.blur(function() {
 
 // on keyup / change flag: reset
 telInput.on("keyup change", reset);
-});   
+});
 
 
 
@@ -208,44 +208,44 @@ telInput.blur(function() {
 
 // on keyup / change flag: reset
 telInput.on("keyup change", reset);
-});   
+});
 
 
 
                      // JAVASCRIPT CODE TO TAKE CARE OF CHARACTERS REMAINING FOR BRIEF HISTORY
 					 $(document).ready(function(e) {
-                        
+
  $('.remaining').each(function(){
-    // find and store the count readout and the related textarea/input field  
-	  var $count = $('.count',this);    
+    // find and store the count readout and the related textarea/input field
+	  var $count = $('.count',this);
 	  var $input = $(this).prev();
     // .text() returns a string, multiply by 1 to make it a number (for math)
 	    var maximumCount = $count.text()*1;
-    // update function is called on keyup, paste and input events   
+    // update function is called on keyup, paste and input events
 	 var update = function(){
         var before = $count.text()*1;        var now = maximumCount - $input.val().length;
 		//check if value remaining is less than or equal to 50 and change the colour
 		if(now <= 100){ $(".remaining").css('color','red'); }
 		//check if value remaining more than or equal to 50 and change the colour
 		if(now >= 100){ $(".remaining").css('color','black'); }
-        // check to make sure users haven't exceeded their limit    
+        // check to make sure users haven't exceeded their limit
 		    if ( now < 0 ){            var str = $input.val();            $input.val( str.substr(0,maximumCount) );            now = 0;        }
-        // only alter the DOM if necessary     
+        // only alter the DOM if necessary
 		   if ( before != now ){            $count.text( now );        }    };
-    // listen for change (see discussion below)  
+    // listen for change (see discussion below)
 	  $input.bind('input keyup paste', function(){setTimeout(update,0)} );
-    // call update initially, in case input is pre-filled 
+    // call update initially, in case input is pre-filled
 	   update();
-}); // close .each() 
+}); // close .each()
 
 					 });
-					 
+
 
 
 /*********************************************PROCESS UPLOAD PROFILE PIC*************************************/
 
 $(document).ready(function(e) {
- 
+
 $uploadCrop = $('#upload-demo').croppie({
 
     enableExif: true,
@@ -270,10 +270,10 @@ $uploadCrop = $('#upload-demo').croppie({
 
 });
 
-$('#uploadBtn').on('change', function () { 
+$('#uploadBtn').on('change', function () {
 
   $(".display_photo").fadeIn();
-  
+
 	var reader = new FileReader();
 
     reader.onload = function (e) {
@@ -286,7 +286,7 @@ $('#uploadBtn').on('change', function () {
 
     		console.log('jQuery bind complete');
 
-    	});   	
+    	});
 
     }
 
@@ -306,6 +306,19 @@ $('.upload-result').on('click', function (ev) {
 	}).then(function (resp) {
 
 
+        if(resp == "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAAbklEQVR4nO3BMQEAAADCoPVPbQsvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgZYDUAAaMExRQAAAAASUVORK5CYII=")
+    		{
+    			//IF NO IMAGE WAS SELECTED
+
+    			window.location.href=url+"signup/businessaccount";
+
+    		}
+
+    else
+    {
+
+      //IF AN IMAGE WAS SELECTED
+
 		$.ajax({
 
 			url: url+"signup/profilephotoupload",
@@ -324,10 +337,12 @@ $('.upload-result').on('click', function (ev) {
 		  {
 			  				window.location.href= url+"virtual_account/index";
 		  }
-  
+
 			}
 
 		});
+
+  }
 
 	});
 

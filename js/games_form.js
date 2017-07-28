@@ -39,7 +39,6 @@ $('.remaining').each(function(){
 					});
 
 
-
           $(document).ready(function()
           {
             $("#gamesform").submit(function()
@@ -173,7 +172,7 @@ $('.remaining').each(function(){
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
-                dropZoneClickTitle: "<img src="+base_url+"img/games.jpg>",
+                dropZoneClickTitle: "<img src="+base_url+"img/game.jpg>",
                 });
             });
 
@@ -186,7 +185,7 @@ $('.remaining').each(function(){
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
-                dropZoneClickTitle: "<img src="+base_url+"img/games.jpg>",
+                dropZoneClickTitle: "<img src="+base_url+"img/game.jpg>",
                 });
             });
 
@@ -198,7 +197,7 @@ $('.remaining').each(function(){
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
-                dropZoneClickTitle: "<img src="+base_url+"img/games.jpg>",
+                dropZoneClickTitle: "<img src="+base_url+"img/game.jpg>",
                 });
             });
 
@@ -210,7 +209,7 @@ $('.remaining').each(function(){
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
-                dropZoneClickTitle: "<img src="+base_url+"img/games.jpg>",
+                dropZoneClickTitle: "<img src="+base_url+"img/game.jpg>",
                 });
             });
 
