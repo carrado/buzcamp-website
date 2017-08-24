@@ -148,7 +148,10 @@ else
 
 $(document).ready(function()
 {
+   if(window.innerWidth > 768)
+   {
 	$(window).scrollTop(0);// this scrolls the page to the top when user refreshes his/her browser
+}
 
   $(window).scroll(function () {
 

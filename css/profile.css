@@ -577,17 +577,6 @@ body
 	list-style:none;
 }
 
-@media screen and (max-width : 480px)
-{
-	.tr_link
-			{
-				text-align:left;
-			}
-.tr_link ul li
-{
-	display:inline-block; margin:0 0% 0 0%; padding:10; margin-top:5px;
-}
-}
 
 @media screen and (max-width : 1200px)
 {

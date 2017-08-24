@@ -10,6 +10,7 @@ angular.module('staticSelect', [])
    };
 }]);
 
+
 // JAVASCRIPT CODE TO TAKE CARE OF CHARACTERS REMAINING FOR PRODUCT DESCRIPTION
 					$(document).ready(function(e) {
 
@@ -64,9 +65,9 @@ $('.remaining').each(function(){
             return false;
             } else describe.removeClass('highlight');
 
-          /*  $.ajax({
+          $.ajax({
              type: "POST",
-             url: url+"computerproduct/computerupload",
+             url: url+"healthbeautyproduct/healthbeautyupload",
              data: $(this).serialize(),
              beforeSend: function()
              {
@@ -120,11 +121,7 @@ $('.remaining').each(function(){
             })
             return false;
             });
-            */
-
-            document.write("good");
             })
-          });
 
 
             $(document).ready(function()
@@ -168,11 +165,11 @@ $('.remaining').each(function(){
                 $("#uploadBtn3").fileinput({
                     uploadAsync: false,
                    showUpload:false,
-                    uploadUrl: url+"computerproduct/computerphoto", // this is actually not important
+                    uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
-                dropZoneClickTitle: "<img src="+base_url+"img/laptop_318-75257.jpg>",
+                dropZoneClickTitle: "<img src="+base_url+"img/health.png>",
                 });
             });
 
@@ -181,11 +178,11 @@ $('.remaining').each(function(){
                 $("#uploadBtn4").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"computerproduct/computerphoto", // this is actually not important
+                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
               showBrowse: false,
               showCaption: false,
               browseOnZoneClick: true,
-              dropZoneClickTitle: "<img src="+base_url+"img/laptop_318-75257.jpg>",
+              dropZoneClickTitle: "<img src="+base_url+"img/health.png>",
                 });
             });
 
@@ -193,24 +190,22 @@ $('.remaining').each(function(){
                 $("#uploadBtn5").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"computerproduct/computerphoto", // this is actually not important
-              showBrowse: false,
-              showCaption: false,
-              browseOnZoneClick: true,
-              dropZoneClickTitle: "<img src="+base_url+"img/laptop_318-75257.jpg>",
-                });
+                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                showBrowse: false,
+                showCaption: false,
+                browseOnZoneClick: true,
+                dropZoneClickTitle: "<img src="+base_url+"img/health.png>",                });
             });
 
             $(document).on("ready", function() {
                 $("#uploadBtn6").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"computerproduct/computerphoto", // this is actually not important
-                 showBrowse: false,
-                 showCaption: false,
-                 browseOnZoneClick: true,
-                 dropZoneClickTitle: "<img src="+base_url+"img/laptop_318-75257.jpg>",
-                });
+                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                showBrowse: false,
+                showCaption: false,
+                browseOnZoneClick: true,
+                dropZoneClickTitle: "<img src="+base_url+"img/health.png>",                });
             });
 
             $(document).ready(function()

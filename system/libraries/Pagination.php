@@ -56,7 +56,7 @@ class CI_Pagination {
 	 * @var	string
 	 */
 
-	  var $full_tag_open = '<ul class="pagination" id="search_page_pagination" style="list-style:none;">';
+	  var $full_tag_open = '<ul class="paginationstyle" style="list-style:none;">';
 	  var $full_tag_close = '</ul>';
 	  var $cur_tag_open = '<li class="active" style="display:none;">';
 	  var $num_tag_open = '';
@@ -70,8 +70,8 @@ class CI_Pagination {
 	  var $last_tag_close = '';
 	  var $next_tag_open = '<li style="display:inline-table; font-weight:bold;">';
 	  var $next_tag_close = '</li>';
-	  var $prev_tag_open = '<li style="display:inline-table; font-weight:bold;">';
-	  var $prev_tag_close = '</li>';
+	  var $prev_tag_open = '';
+	  var $prev_tag_close = '';
 	  var $page_query_string = FALSE;
 	  var $num_links = '';
 
@@ -603,8 +603,8 @@ class CI_Pagination {
 			if ($i === $base_page)
 			{
 				// First page
-				$output .= $this->prev_tag_open.'<a href="'.$first_url.'"'.$attributes.$this->_attr_rel('prev').' style="outline:none;">'
-					.$this->prev_link.'</a>'.$this->prev_tag_close;
+				//$output .= $this->prev_tag_open.'<a href="'.$first_url.'"'.$attributes.$this->_attr_rel('prev').' style="outline:none;">'
+					//.$this->prev_link.'</a>'.$this->prev_tag_close;
 			}
 			else
 			{
