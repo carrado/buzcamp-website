@@ -41,13 +41,11 @@ $('.remaining').each(function(){
 
 
 
-
           $(document).ready(function()
           {
-            $("#healthbeautyform").submit(function()
+            $("#homekitchenform").submit(function()
             {
             var name = $('input[name=name]');
-            var brand = $('input[name=brand]');
             var price = $('input[name=price]');
             var describe = $('textarea[name=description]');
 
@@ -55,12 +53,6 @@ $('.remaining').each(function(){
             name.addClass('highlight');
             return false;
           } else name.removeClass('highlight');
-
-          if(brand.val() == '')
-          {
-            brand.addClass('highlight');
-            return false;
-          } else brand.removeClass('highlight');
 
           if(price.val()==''){
             price.addClass('highlight');
@@ -74,7 +66,7 @@ $('.remaining').each(function(){
 
           $.ajax({
              type: "POST",
-             url: url+"healthbeautyproduct/healthbeautyupload",
+             url: url+"homekitchenproduct/homekitchenupload",
              data: $(this).serialize(),
              beforeSend: function()
              {
@@ -86,28 +78,36 @@ $('.remaining').each(function(){
               {
                      $(".loading").hide();
 
-                        if((data == '#categoryselect') || (data == '#salesselect'))
+                        if((data == '#categoryselect') || (data == '#salesselect') || (data == '#productcat'))
                         {
                           $(data).fadeIn();
                         }
-                       else if((data != '#categoryselect') || (data != '#salesselect'))
+                       else if((data != '#categoryselect') || (data != '#salesselect') || (data != '#productcat'))
                          {
                           $(data).addClass("highlight");
                         }
 
-                        var regno = $('input[name=regno]');
-                        var mandate = $('input[name=man_date]');
-                        var exp_date = $('input[name=exp_date]');
+                        var colour = $('input[name=colour]');
+                        var material = $('input[name=material]');
+                        var size = $('input[name=size]');
+                        var brand = $('input[name=brand]');
+                        var thickness = $('input[name=thickness]');
 
-                        if (regno.val() !='') {
-                        regno.removeClass('highlight');
+                        if (colour.val() !='') {
+                        colour.removeClass('highlight');
                       }
-                      if (mandate.val() !='') {
-                      mandate.removeClass('highlight');
+                      if (material.val() !='') {
+                      material.removeClass('highlight');
                       }
-                      if (exp_date.val() !='') {
-                      exp_date.removeClass('highlight');
+                      if (size.val() !='') {
+                      size.removeClass('highlight');
                     }
+                    if (brand.val() !='') {
+                    brand.removeClass('highlight');
+                  }
+                  if (thickness.val() !='') {
+                  thickness.removeClass('highlight');
+                }
 
                          if(data != '#categoryselect')
                         {
@@ -117,6 +117,11 @@ $('.remaining').each(function(){
                         {
                           $("#salesselect").fadeOut();
                         }
+                        if(data != '#productcat')
+                        {
+                          $("#productcat").fadeOut();
+                        }
+
               }
               else if(data == "")
               {
@@ -187,7 +192,7 @@ $('.remaining').each(function(){
                 $("#uploadBtn3").fileinput({
                     uploadAsync: false,
                    showUpload:false,
-                    uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                    uploadUrl: url+"homekitchenproduct/homekitchenphoto", // this is actually not important
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
@@ -200,7 +205,7 @@ $('.remaining').each(function(){
                 $("#uploadBtn4").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                 uploadUrl: url+"homekitchenproduct/homekitchenphoto", // this is actually not important
               showBrowse: false,
               showCaption: false,
               browseOnZoneClick: true,
@@ -212,7 +217,7 @@ $('.remaining').each(function(){
                 $("#uploadBtn5").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                 uploadUrl: url+"homekitchenproduct/homekitchenphoto", // this is actually not important
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,
@@ -223,7 +228,7 @@ $('.remaining').each(function(){
                 $("#uploadBtn6").fileinput({
                   uploadAsync: false,
                  showUpload:false,
-                  uploadUrl: url+"healthbeautyproduct/healthbeautyphoto", // this is actually not important
+                 uploadUrl: url+"homekitchenproduct/homekitchenphoto", // this is actually not important
                 showBrowse: false,
                 showCaption: false,
                 browseOnZoneClick: true,

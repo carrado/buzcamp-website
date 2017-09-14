@@ -17,8 +17,9 @@ a:hover{
 
 body
 {
-  font-size: 12px;
+  font-size: 13px;
   background-color :#f1f1f1;
+  font-family: calibri;
 }
 
 .profile
@@ -261,8 +262,36 @@ body
 	text-decoration:underline;
 }
 
-<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
+.display-box{
+  position: relative;
+ min-height: 222px;
+ display: inline-block;
+ vertical-align: top;
+ background: #ffffff;
+ margin-top: 1px;
+ font-family: calibri;
+ float:left;
+ text-align: center;
+}
 
+.display-box:hover{
+ color: #EE7600;
+ text-decoration: underline;
+}
+
+.display-box .load_img{
+ max-width: 180px;
+ height: 150px;
+ margin-top: 10px;
+ margin-bottom: 5px;
+}
+
+.display-box p{
+ margin-top: 10px;
+ text-transform: capitalize;
+ color: #101010;
+ font-weight: bold;
+}
 
 
 
@@ -274,8 +303,6 @@ body
  left: 82%;
  margin-top: 3.5%;
 }
-=======
->>>>>>> Update
 
 a:hover
 {
@@ -339,11 +366,9 @@ a:hover
 #target
 {
 	background-color:#FFF;
-	margin-left:35%;
-=======
+	margin-left: 35%;
 	background-color:#FFF;
 	margin-left:37%;
->>>>>>> Update
 		width:25%;
 	margin-top:15%;
 	min-height:100px;

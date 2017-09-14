@@ -13,8 +13,6 @@ $(document).ready(function()
 });
 
 
-<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
-=======
 
 /*********************************************PROCESS UPLOAD PROFILE PIC*************************************/
 
@@ -133,37 +131,6 @@ else
 });
 
 
->>>>>>> Update
-
-
-/***************Pagination Of Products Ajax function for Computer Device Type ***************/
-
-	 $(document).ready(function(e)
-	{
-		$(window).scrollTop(0);
-
-	 var track_page = 1;
-	 var loading = false;
-
-	load_content(track_page);
-
-	$(window).scroll(function () {
-
-		if($(window).scrollTop() + $(window).height() >= $(document).height()) { //if user scrolled to bottom of the page
-
-	track_page++;
- load_content(track_page);
- }
-	 });
-
-function load_content(track_page)
-	 {
-		 if(loading == false)
-		 {
-			 loading = true;
-
-<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
-
 
 /***************Pagination Of Products Ajax function for Computer Device Type ***************/
 
@@ -204,21 +171,6 @@ function load_content(track_page)
 			 {
 				 loading = false;
 
-=======
-			 $.ajax({
-				 type: 'POST',
-			 url: url+'virtual_account/timeline_sales',
-			 data: {'page': track_page},
-			 dataType: "html",
-			 beforeSend: function()
-			 {
-				 $(".loadiconer").show();
-			 },
-			 success: function(data)
-			 {
-				 loading = false;
-
->>>>>>> Update
 				$(".loadiconer").hide();
 
 					 $(".products_showcase").append(data);
@@ -229,8 +181,6 @@ function load_content(track_page)
 		 }
 	 }
 				 })
-<<<<<<< 25b69d20b9b6e2b93c3619369e3fcf9fe8433d78
-=======
 
 
 
@@ -243,7 +193,6 @@ var field = 0; //variable used to check how many times our popup sound may appea
 var target = url+"carrado_default/notification"; //url to fetch data
 new get_approve(field,id,target,isDocumentReady); //API Function to run full program and produce sound
 });
->>>>>>> Update
 
 
 				 /***************************************VIEW USER PROFILE*************************************/

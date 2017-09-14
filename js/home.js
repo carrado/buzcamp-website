@@ -9,30 +9,6 @@ $('.header_fn').scrollToFixed();
 
 });
 
-/*      Function to disappear and appear left-bar-categories and right-bar-categories     *
-
-$(document).ready(function()
-{
-  $(window).scrollTop(0);// this scrolls the page to the top when user refreshes his/her browser
-
-  $(window).scroll(function () {
-
-    var abs = $(window).scrollTop();
-
-    if(abs >= 340)
-    {
-      $("#left-bar-categories").fadeOut("slow");
-      $("#right-bar-categories").fadeOut("slow");
-    }
-    else if(abs < 340)
-    {
-      $("#left-bar-categories").fadeIn("slow");
-      $("#right-bar-categories").fadeIn("slow");
-    }
-});
-
-})
-*/
 
                  /*  Function for sliders for XS and SM Devices */
 
@@ -41,18 +17,58 @@ $(document).ready(function()
                 });
 
 
-                /*******************************CATEGORIES SLIDER*************/
-                $(function()
-                {
-                	$(".category").excoloSlider({
 
-                		interval: 5000,
+               /***************************FADE IN AND OUT CATEGORIES *********************/
 
-                	});
-                })
+               $(document).ready(function()
+               {
+                 if(window.innerWidth > 768)
+                 {
+                   $(window).scrollTop(0);
+                 }
+                 $(window).scroll(function() {
+               var abs = $(window).scrollTop();
+
+            if(abs >= 250)
+            {
+              $("#left-bar-categories").fadeOut('slow');
+              $("#right-bar-categories").fadeOut('slow');
+            }
+            else if(abs < 250)
+            {
+              $("#left-bar-categories").fadeIn('slow');
+              $("#right-bar-categories").fadeIn('slow');
+            }
+                 })
+               })
 
 
 
+                /*********************FADE IN PRODUCTS***************/
+
+                $(document).ready(function() {
+
+                    /* Every time the window is scrolled ... */
+                    $(window).scroll( function(){
+
+                        /* Check the location of each desired element */
+                        $('.display-box').each( function(i){
+
+                            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                            /* If the object is completely visible in the window, fade it it */
+                            if( bottom_of_window > bottom_of_object ){
+
+                                $(this).animate({'opacity':'1'},2500);
+
+                            }
+
+                        });
+
+                    });
+
+                });
 
      /*    FUNCTION TO PROCESS MY PROFILE WHEN CLICKED, SALES FORUM WHEN CLICKED AND LOGIN         */
 
@@ -154,7 +170,7 @@ $(".view").click(function(e)
     $.ajax({
            type: "POST",
            url: url+"carrado_default/viewproduct",
-           data: $(this).parent().parent().parent().serialize(),
+           data: $(this).parent().parent().serialize(),
 		   beforeSend: function()
 		   {
 

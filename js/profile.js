@@ -159,11 +159,11 @@ $(document).ready(function()
 		{
       if(window.innerWidth > 992)
       {
-			if(abs >= 197)
+			if(abs >= 196)
 			{
 					$(".navigation-links").addClass('navfix');
 			}
-			else if(abs < 197)
+			else if(abs <= 196)
 			{
 				$(".navigation-links").removeClass('navfix');
 			}
@@ -183,14 +183,12 @@ $(document).ready(function()
 
     var abs = $(window).scrollTop();
 		{
-			if(abs >= 197)
+			if(abs >= 196)
 			{
-				$(".figure").hide();
 					$(".menu-section").addClass('menu_bar_fixed');
 			}
-			else if(abs < 197)
+			else if(abs <= 196)
 			{
-				$(".figure").fadeIn();
 				$(".menu-section").removeClass('menu_bar_fixed');
 			}
 		}
@@ -212,23 +210,6 @@ $(function()
 /****************************************Handles Transaction Id Collapse Toggle*******************************/
 $(function () { $('#collapseOne').collapse('toggle')});
   $(function () { $('#collapseTwo').collapse('toggle')});
-
-/********************************************Top Carrado Sellers Scroll Function**********************************/
-  $(document).ready(function()
- {
- $('#top_sellers_scrollbar').slimScroll({
-     width: '101%',
- 	height:'300px',
-     size: '6px',
-     position: 'right',
-     color: '#202020',
-     start:'top',
- 	allowPageScroll: false,
- 	 railVisible: true,
- 	 wheelStep: 10,
- 	 alwaysVisible: false,
- });
- });
 
 
  /*            enable bootstrap tooltips            */
@@ -501,17 +482,6 @@ $(document).ready(function()
 {
 	$(".load_view_cover").load(""+url+"profile/preview_coverphoto");}, 15000);
 	$.ajaxSetup({ cache:false });
-
-	$(".load_view_cover").mouseover(function(e) {
-  clearInterval(refreshId);
-}).mouseout(function()
-{
-refreshId = setInterval(function()
-{
-$(".load_view_cover").load(""+url+"profile/preview_coverphoto");
-}, 1000);
-$.ajaxSetup({ cache:false });
-});
 });
 
 			 /*****************************INITIALIZE POP UP BOXES**************************/

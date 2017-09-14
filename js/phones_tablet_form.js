@@ -133,6 +133,17 @@ $('.remaining').each(function(){
                          {
                           $(data).addClass("highlight");
                         }
+
+                        var sdcard = $('input[name=sd_card]');
+                        var gpu = $('input[name=gpu]');
+
+                        if (sdcard.val() !='') {
+                        sdcard.removeClass('highlight');
+                      }
+                      if (gpu.val() !='') {
+                      gpu.removeClass('highlight');
+                      }
+
                          if(data != '#categoryselect')
                         {
                           $("#categoryselect").fadeOut();

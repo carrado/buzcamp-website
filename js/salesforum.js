@@ -63,6 +63,31 @@
 
 
 
+/********************************************Top Carrado Sellers Scroll Function**********************************/
+  $(document).ready(function()
+ {
+ $('#top_sellers_scrollbar').slimScroll({
+     width: '101%',
+ 	height:'370px',
+     size: '6px',
+     position: 'right',
+     color: '#202020',
+     start:'top',
+ 	allowPageScroll: false,
+ 	 railVisible: true,
+ 	 wheelStep: 10,
+ 	 alwaysVisible: false,
+ });
+ });
+
+
+ /*            enable bootstrap tooltips            */
+
+  $(function () { $("[data-toggle='tooltip']").tooltip({html:true,trigger:'hover'}); });
+
+
+
+
   /*******************************MOBILE BUSINESS PARTNER SLIDER*************/
 	$(function()
 	{
@@ -421,6 +446,8 @@ $(document).ready(function()
 {
     $("#myCarousel").carousel('cycle');
 })
+
+
 
 
 	var url = "http://localhost/Carrado/index.php/";

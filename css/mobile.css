@@ -9,8 +9,9 @@ DISPLAY FOLLOWING mobile views
 
 body
 {
-  font-size: 12px;
+  font-size: 13px;
   background-color: #f1f1f1;
+  font-family: calibri;
 }
 
 .loading{

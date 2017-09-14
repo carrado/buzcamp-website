@@ -90,6 +90,17 @@ $('.remaining').each(function(){
                          {
                           $(data).addClass("highlight");
                         }
+
+                        var weight = $('input[name=weight]');
+                        var developers = $('input[name=developers]');
+
+                    if (weight.val() !='') {
+                    weight.removeClass('highlight');
+                  }
+                  if (developers.val() !='') {
+                  developers.removeClass('highlight');
+                }
+
                          if(data != '#categoryselect')
                         {
                           $("#categoryselect").fadeOut();

@@ -8,8 +8,9 @@ a:hover{
 
 body
 {
-  font-size: 12px;
+  font-size: 13px;
   background-color :#f1f1f1;
+  font-family: calibri;
 }
 
 .profile
@@ -145,9 +146,10 @@ body
          #background_cycler {
            position: relative;
            width: 100%;
-      height: 200px;
+      height: 220px;
       overflow: hidden;
       background:  #676666;
+      margin-top: -.2%;
     }
     }
 
@@ -166,6 +168,7 @@ body
 {
   position: absolute;
   background-color: transparent;
+  margin-top: 1%;
 }
 
 
@@ -180,7 +183,7 @@ body
   position: fixed;
   width: 14.5%;
   float: left;
-  margin-top: -15%;
+  margin-top: -16%;
 }
 }
 
@@ -342,7 +345,7 @@ body
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-	font-size:small;
+    font-size: 15px;
    }
 
 .overlay input.upload
@@ -420,7 +423,7 @@ body
   position: fixed;
   width: 50%;
   left: 21%;
-  margin-top: -15%;
+  margin-top: -16.5%;
 }
 }
 
@@ -663,7 +666,7 @@ border: none;
   outline: 0;
  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
  top:18%;
- left: 8%;
+ left: -2%;
  -webkit-transform:translate(-50%, -50%);
  transform: scale(1);
  animation: fadeIn 2s linear;

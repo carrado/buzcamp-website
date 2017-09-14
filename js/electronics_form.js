@@ -102,6 +102,29 @@ $('.remaining').each(function(){
                        {
                         $(data).addClass("highlight");
                       }
+
+                      var connectivity= $('input[name=connectivity]');
+                      var resolution = $('input[name=resolution]');
+                      var optical = $('input[name=optical_value]');
+                      var resolutionpixels = $('input[name=resolutionpixels]');
+                      var cd = $('input[name=cd]');
+
+                      if (connectivity.val() !='') {
+                      connectivity.removeClass('highlight');
+                    }
+                    if (resolution.val() !='') {
+                    resolution.removeClass('highlight');
+                    }
+                    if (optical.val() !='') {
+                    optical.removeClass('highlight');
+                  }
+                  if (resolutionpixels.val() !='') {
+                  resolutionpixels.removeClass('highlight');
+                }
+                if (cd.val() !='') {
+                cd.removeClass('highlight');
+                }
+
                        if(data != '#kindsselect')
                       {
                         $("#kindsselect").fadeOut();

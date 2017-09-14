@@ -110,6 +110,7 @@ button{
 }
 
 
+/*
 .category_list
 {
 	list-style:none;
@@ -120,7 +121,7 @@ button{
   margin-top: -2%;
 }
 
-.category li
+.category div
 {
 	display: inline-block;
 	width: 25%;
@@ -135,19 +136,22 @@ button{
   float: left;
 }
 
-.category_list a
+.category a
 {
   color: #202020;
   font-weight: bold;
   outline: none;
 }
 
-.category_list a:hover
+.category a:hover
 {
   color: #090;
 }
+*/
 
-/*#left-bar-categories
+@media screen and (min-width : 1200px)
+{
+#left-bar-categories
 {
      position: fixed;
      top: 180px;
@@ -160,6 +164,25 @@ button{
  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
      right: 0;
 }
+}
+
+@media screen and (max-width : 1200px)
+{
+#left-bar-categories
+{
+     position: fixed;
+     top: 180px;
+	 width: 25%;
+	 background-color:#FFF;
+	 margin-right: 75%;
+	   z-index: 0101;
+   border-radius: 6px;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+     right: 0;
+}
+}
+
 #left-bar-categories ul
 {
   list-style: none;
@@ -171,8 +194,17 @@ button{
   font-size: small;
   text-align: center;
   padding: 8%;
+  float: left;
+}
+#left-bar-categories ul li div a
+{
+  color: #e88337;
+  text-decoration: none;
+  outline: none;
 }
 
+@media screen and (min-width : 1200px)
+{
 #right-bar-categories
 {
      position: fixed;
@@ -186,11 +218,29 @@ button{
  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
      right: 0;
 }
+}
+
+@media screen and (max-width : 1200px)
+{
+#right-bar-categories
+{
+     position: fixed;
+     top: 180px;
+	 width:25%;
+	 background-color:#FFF;
+	 margin-right:0%;
+	   z-index: 0101;
+   border-radius: 6px;
+  outline: 0;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+     right: 0;
+}
+}
+
 #right-bar-categories ul
 {
   list-style: none;
 }
-
 #right-bar-categories ul li
 {
   display: block;
@@ -199,7 +249,14 @@ button{
   text-align: center;
   padding: 8%;
 }
-*/
+#right-bar-categories ul li div a
+{
+  color: #e88337;
+  text-decoration: none;
+  outline: none;
+}
+
+
 
 .div-product_catalog
 {
@@ -223,6 +280,8 @@ button{
   width: 100%;
 }
 
+@media screen and (max-width : 1200px)
+{
  .display-box{
    position: relative;
 	min-height: 222px;
@@ -233,6 +292,24 @@ button{
 	font-family: calibri;
   float:left;
   text-align: center;
+}
+}
+
+
+@media screen and (min-width : 1200px)
+{
+ .display-box{
+   position: relative;
+	min-height: 222px;
+	display: inline-block;
+	vertical-align: top;
+	background: #ffffff;
+	margin-top: 1px;
+  opacity: 0;
+	font-family: calibri;
+  float:left;
+  text-align: center;
+}
 }
 
  .display-box:hover{
@@ -256,7 +333,6 @@ button{
 {
 	color: #e88337;
 	font-size: 12px;
-	font-weight: bold;
 }
 
 .viewxs
@@ -278,6 +354,7 @@ button{
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
+
 
 
 		 #target

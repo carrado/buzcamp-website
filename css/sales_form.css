@@ -11,12 +11,11 @@ a:hover{
   color: #FFF;
 }
 
-
-
 body
 {
- font-size: 12px;
+ font-size: 13px;
   background-color :#f1f1f1;
+  font-family: calibri;
 }
 
 /* Outer */
@@ -89,7 +88,7 @@ body
 
 .icon
 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #202020;
 }
 
@@ -251,6 +250,12 @@ body
 }
 
 #categoryselect
+{
+  display: none;
+  color: #F00;
+}
+
+#productcat
 {
   display: none;
   color: #F00;

@@ -92,6 +92,34 @@ $('.remaining').each(function(){
                          {
                           $(data).addClass("highlight");
                         }
+
+                        var size = $('input[name=size]');
+                        var colour = $('input[name=colour]');
+                        var harddrive = $('input[name=harddrive]');
+                        var processor = $('input[name=processor]');
+                        var os = $('input[name=os]');
+                        var ram = $('input[name=ram]');
+
+                        if (size.val() !='') {
+                        size.removeClass('highlight');
+                      }
+                      if (colour.val() !='') {
+                      colour.removeClass('highlight');
+                      }
+                      if (harddrive.val() !='') {
+                      harddrive.removeClass('highlight');
+                    }
+                    if (processor.val() !='') {
+                    processor.removeClass('highlight');
+                  }
+                  if (os.val() !='') {
+                  os.removeClass('highlight');
+                }
+                if(ram.val() !='')
+                {
+                  ram.removeClass('highlight');
+                }
+
                          if(data != '#categoryselect')
                         {
                           $("#categoryselect").fadeOut();
