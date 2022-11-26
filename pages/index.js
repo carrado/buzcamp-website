@@ -1,14 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
-import { SnackbarProvider } from 'notistack';
-import utilStyles from "../styles/utils.module.css";
-import App from "./app";
+import Home from "./home";
 
-export default function Home() {
 
-    let vertical = 'top';
-    let horizontal = 'right';
-    
+export default function App() {
     return (
         <>
             <Head>
@@ -19,19 +13,7 @@ export default function Home() {
                 <title>BuzCamp</title>
                 <link rel="icon" href="/bzcmp.png" />
             </Head>
-            <SnackbarProvider maxSnack={3}
-                anchorOrigin={{ vertical, horizontal }}
-            >
-               <App />
-            </SnackbarProvider>
-
-            <section className={utilStyles.headingMd}>
-                <p>
-                    <Link href="/posts/firstpost">Anyanwu Emeka, software Engineers</Link>
-                </p>
-                <p>
-                </p>
-            </section>
+            <Home />
         </>
     );
 }
