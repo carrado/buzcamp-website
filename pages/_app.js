@@ -1,16 +1,20 @@
 import "../styles/globals.css";
-import { SnackbarProvider } from 'notistack';
+import { SnackbarProvider } from "notistack";
 
 function MyApp({ Component, pageProps }) {
-    let vertical = 'top';
-    let horizontal = 'right';
+  let vertical = "top";
+  let horizontal = "right";
 
-    return <SnackbarProvider maxSnack={3}
-        anchorOrigin={{ vertical, horizontal }}
-        preventDuplicate
+  return (
+    <SnackbarProvider
+      maxSnack={3}
+      anchorOrigin={{ vertical, horizontal }}
+      preventDuplicate
+      hideIconVariant={true}
     >
-        <Component {...pageProps} />
-    </SnackbarProvider>;
+      <Component {...pageProps} />
+    </SnackbarProvider>
+  );
 }
 
 export default MyApp;
