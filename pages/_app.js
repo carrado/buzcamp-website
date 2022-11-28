@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }) {
     <SnackbarProvider
       maxSnack={3}
       anchorOrigin={{ vertical, horizontal }}
-      preventDuplicate
       hideIconVariant={true}
     >
       <Component {...pageProps} />
