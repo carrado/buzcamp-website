@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function AppBlock({ title, children }) {
   return (
@@ -23,6 +24,7 @@ export default function AppBlock({ title, children }) {
         <div className="bz-flex bz-w-full">
           <div className="bz-flex bz-w-42 bz-h-full bz-fixed bz-z-50">
             <div className="bz-w-full bz-bg-lightest-red bz-mix-blend-normal bz-shadow-logo bz-rounded-xxl">
+              <Link href="/">
               <Image
                 src="/images/buzcamp.png"
                 height={250}
@@ -31,6 +33,7 @@ export default function AppBlock({ title, children }) {
                 className="bz-absolute"
                 style={{ left: "26.5%" }}
               />
+              </Link>
               <Image
                 src="/images/bz-student_1.png"
                 height={247}
