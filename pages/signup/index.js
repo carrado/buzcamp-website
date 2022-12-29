@@ -21,6 +21,10 @@ var CryptoJS = require("crypto-js");
 
 const axios = require("axios");
 
+var ng_universities = require('ng_universities');
+
+
+
 export default function SignUpForm() {
   const { enqueueSnackbar } = useSnackbar();
 
@@ -56,39 +60,20 @@ export default function SignUpForm() {
 
   const [schoolOptions, getSchools] = useState([]);
 
+  /** Populate Schools in the Institution  Box */
+  useEffect(() => {
+    const federalUniversities = JSON.parse(ng_universities.getUniversities("federal"));
+    const arr = [];
+    federalUniversities.map((university) => {
+      arr.push({ name: university.name, label: university.name });
+    });
+    getSchools(arr);
+  }, []);
+  
+
   const [showPassword, setValues] = useState(false);
   const [disableBtn, setDisabled] = useState(false);
 
-  useEffect(() => {
-    const arr = [];
-    let isApiSubscribed = true;
-
-    const options = {
-      method: "GET",
-      url: "https://nigeria-universites.p.rapidapi.com/universities/",
-      headers: {
-        "X-RapidAPI-Host": "nigeria-universites.p.rapidapi.com",
-        "X-RapidAPI-Key": "c66440ca76msh88696809f9d4147p1becc7jsn0fc6e4aa8bdf",
-      },
-    };
-
-    axios.request(options).then((response) => {
-      if (isApiSubscribed) {
-        response.data.map((college) => {
-          if (college.type === "federal" || college.type === "state") {
-            arr.push({ name: college.name, label: college.name });
-          }
-          return {};
-        });
-
-        getSchools(arr);
-      }
-    });
-    return () => {
-      // cancel the subscription
-      isApiSubscribed = false;
-    };
-  }, []);
 
   const CssTextField = styled(TextField)({
     "& .MuiInputBase-input": {

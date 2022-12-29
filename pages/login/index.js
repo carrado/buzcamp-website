@@ -132,7 +132,7 @@ export default function Login() {
                     </span>
                   </div>
                   <div className="bz-flex bz-flex-col bz-w-3/5 cardClass bz-text-white bz-mb-6">
-                    <Card variant="outlined" className="bz-p-5">
+                    <Card className="bz-p-5">
                       <form onSubmit={handleSubmit}>
                         <div className="bz-flex">
                           <Box
@@ -241,7 +241,7 @@ export default function Login() {
                         </div>
 
                         <div className="bz-flex bz-w-full bz-justify-center bz-mt-6">
-                          <Link href="/password_reset">
+                          <Link href="/forgot-password">
                             <span className="bz-text-blueCrayola bz-text-sm  bz-font-semibold">
                               Forgot Password ?
                             </span>
