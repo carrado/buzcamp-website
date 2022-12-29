@@ -117,7 +117,7 @@ export default function SignUpForm() {
         `${values.institution}`,
         "my-secret-key@123"
       ).toString(),
-      __rdNati: CryptoJS.RabbitLegacyRabbitLegacy.encrypt(
+      __rdNati: CryptoJS.RabbitLegacy.encrypt(
         `${values.nationality}`,
         "ecret-key@123"
       ).toString(),
@@ -137,7 +137,7 @@ export default function SignUpForm() {
 
     axios
       .post(
-        `${process.env.REACT_APP_BUZCAMP_APP_ALLY}/authenticate/createuser`,
+        `${process.env.NEXT_PUBLIC_BUZCAMP_APP_ALLY}/authenticate/createuser`,
         payload,
         {
           headers: {
