@@ -76,8 +76,7 @@ export default function Login() {
         payload,
         {
           headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://bzcdn.com.ng"
+            "Content-Type": "application/json"
           },
         }
       )
