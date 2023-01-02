@@ -112,3 +112,16 @@ button[disabled] {
 .css-1pxa9xg-MuiAlert-message {
   line-height: 1.9;
 }
+
+.inputStyle {
+  width: 4rem !important;
+  height: 4rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.errordOtp {
+  border: 2px solid rgba(218, 8, 8, 0.747);
+}

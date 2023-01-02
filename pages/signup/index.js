@@ -2,6 +2,7 @@ import { Formik } from "formik";
 import { useRouter } from "next/router";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -26,6 +27,8 @@ var ng_universities = require('ng_universities');
 
 
 export default function SignUpForm() {
+  const [cookie, setCookie] = useCookies(["lynchpin"]);
+
   const { enqueueSnackbar } = useSnackbar();
 
   const router = useRouter();
@@ -148,8 +151,12 @@ export default function SignUpForm() {
       .then((response) => {
         const variant = "success";
         enqueueSnackbar(response.data.message, { variant });
+        setCookie("lynchpin", response.data.data.__tkI9shaB, {
+          path: "/",
+          maxAge: 3600, // Expires after 1hr
+          sameSite: true,
+        });
         router.push("/verification");
-        // history.push(`/carrado/buzcamp-websit/verification/?a_&pr=${response.data.data.__tkI9shaB}`);
         setDisabled(false);
       })
       .catch((err) => {
