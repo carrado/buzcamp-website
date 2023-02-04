@@ -130,17 +130,7 @@ export default function VerificationPage() {
                         </div>
 
                         <div className='bz-flex bz-w-full bz-justify-center bz-mt-4'>
-                            <OtpInput value={OTP} onChange={changeOTP} numInputs={5} separator={<span>-</span>} />;
-                            {/* <OtpInput
-                                value={OTP}
-                                inputStyle='inputStyle'
-                                onChange={changeOTP}
-                                numInputs={5}
-                                separator={<span>-</span>}
-                                isInputNum={true}
-                                hasErrored={hasError}
-                                errorStyle='errordOtp'
-                            /> */}
+                            <OtpInput value={OTP} onChange={changeOTP} className='inputStyle' numInputs={5} separator={<span>-</span>} />
                         </div>
 
                         <div className='bz-flex bz-w-3/4 bz-justify-center bz-mt-7'>
