@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
-import OtpInput from 'react-otp-input';
+import OtpInput from 'react18-input-otp';
 import { Cookies } from 'react-cookie';
 import AppBlock from "../../components/appBlock";
 
@@ -25,6 +25,7 @@ export default function VerificationPage() {
         if (event.length === 5) {
             submitOTP(event);
         } else {
+            console.log(event);
             setError(false);
         }
     }
@@ -129,7 +130,8 @@ export default function VerificationPage() {
                         </div>
 
                         <div className='bz-flex bz-w-full bz-justify-center bz-mt-4'>
-                            <OtpInput
+                            <OtpInput value={OTP} onChange={changeOTP} numInputs={5} separator={<span>-</span>} />;
+                            {/* <OtpInput
                                 value={OTP}
                                 inputStyle='inputStyle'
                                 onChange={changeOTP}
@@ -138,7 +140,7 @@ export default function VerificationPage() {
                                 isInputNum={true}
                                 hasErrored={hasError}
                                 errorStyle='errordOtp'
-                            />
+                            /> */}
                         </div>
 
                         <div className='bz-flex bz-w-3/4 bz-justify-center bz-mt-7'>
