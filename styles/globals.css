@@ -113,7 +113,7 @@ button[disabled] {
   line-height: 1.9;
 }
 
-.inputStyle {
+.inputStyle input {
   width: 4rem !important;
   height: 4rem;
   margin: 0 1rem;
