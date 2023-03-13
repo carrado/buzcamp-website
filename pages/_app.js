@@ -1,15 +1,14 @@
 import "../styles/globals.css";
-//import { SnackbarProvider } from "notistack";
-import { ThemeProvider} from "@material-tailwind/react";
+import { SnackbarProvider } from "notistack";
 
 function MyApp({ Component, pageProps }) {
   let vertical = "top";
   let horizontal = "right";
 
   return (
-      <ThemeProvider>
+    <SnackbarProvider>
         <Component {...pageProps} />
-      </ThemeProvider>
+      </SnackbarProvider>
   );
 }
 

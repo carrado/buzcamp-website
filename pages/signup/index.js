@@ -3,9 +3,10 @@ import { useRouter } from "next/router";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
-//import { useSnackbar } from "notistack";
+import { useSnackbar } from "notistack";
 import Head from "next/dist/shared/lib/head";
 import Header from "../../components/Header";
+import { Card } from "@mui/material";
 
 var CryptoJS = require("crypto-js");
 
@@ -18,7 +19,7 @@ var ng_universities = require('ng_universities');
 export default function SignUpForm() {
   const [cookie, setCookie] = useCookies(["lynchpin"]);
 
- // const { enqueueSnackbar } = useSnackbar();
+ const { enqueueSnackbar } = useSnackbar();
 
   const router = useRouter();
 
@@ -121,7 +122,7 @@ export default function SignUpForm() {
       )
       .then((response) => {
         const variant = "success";
-        //enqueueSnackbar(response.data.message, { variant });
+        enqueueSnackbar(response.data.message, { variant });
         setCookie("lynchpin", response.data.data.__tkI9shaB, {
           path: "/",
           maxAge: 3600, // Expires after 1hr
@@ -132,7 +133,7 @@ export default function SignUpForm() {
       })
       .catch((err) => {
         const variant = "error";
-        //enqueueSnackbar(err.response.data.message, { variant });
+        enqueueSnackbar(err.response.data.message, { variant });
         setDisabled(false);
       });
   };
@@ -176,6 +177,11 @@ export default function SignUpForm() {
             <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full">
               <Header />
               <div className="bz-ellipse"></div>
+              <div className="bz-flex bz-w-full bz-justify-center">
+              <Card variant="outlined" className="bz-flex bz-flex-col bz-w-1/2 bz-p-3">
+
+                </Card> 
+                </div>
               </div>
           </>
         );
