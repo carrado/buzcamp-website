@@ -125,3 +125,26 @@ button[disabled] {
 .errordOtp {
   border: 2px solid rgba(218, 8, 8, 0.747);
 }
+
+.gradient-bz {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(150px);
+}
+
+.bz-ellipse {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  left: -15px;
+  top: 294px;
+  background: #377dff;
+  opacity: 0.3;
+}
+
+.bz-cardShadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+}
