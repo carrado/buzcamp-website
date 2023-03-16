@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <SnackbarProvider>
-        <Component {...pageProps} />
-      </SnackbarProvider>
+      <Component {...pageProps} />
+    </SnackbarProvider>
   );
 }
 

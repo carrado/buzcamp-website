@@ -1,4 +1,4 @@
-import { BrowserView, MobileView } from 'react-device-detect';
+import { BrowserView, MobileView } from "react-device-detect";
 import Home from "./home";
 import Mobile from "./home/mobile";
 

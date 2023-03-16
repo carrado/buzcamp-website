@@ -1,4 +1,3 @@
-import { Formik } from "formik";
 import { useRouter } from "next/router";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
@@ -6,20 +5,19 @@ import { useCookies } from "react-cookie";
 import { useSnackbar } from "notistack";
 import Head from "next/dist/shared/lib/head";
 import Header from "../../components/Header";
-import { Card } from "@mui/material";
+import Card from "../../components/Card";
+import { InputText } from "../../components/BzInput";
 
 var CryptoJS = require("crypto-js");
 
 const axios = require("axios");
 
-var ng_universities = require('ng_universities');
-
-
+var ng_universities = require("ng_universities");
 
 export default function SignUpForm() {
   const [cookie, setCookie] = useCookies(["lynchpin"]);
 
- const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 
   const router = useRouter();
 
@@ -55,14 +53,15 @@ export default function SignUpForm() {
 
   /** Populate Schools in the Institution  Box */
   useEffect(() => {
-    const federalUniversities = JSON.parse(ng_universities.getUniversities("federal"));
+    const federalUniversities = JSON.parse(
+      ng_universities.getUniversities("federal")
+    );
     const arr = [];
     federalUniversities.map((university) => {
       arr.push({ name: university.name, label: university.name });
     });
     getSchools(arr);
   }, []);
-  
 
   const [showPassword, setValues] = useState(false);
   const [disableBtn, setDisabled] = useState(false);
@@ -138,54 +137,66 @@ export default function SignUpForm() {
       });
   };
 
+  const changeInput = (value) => {
+    console.log(value);
+  };
+
   return (
-    <Formik
-      validationSchema={testSchema}
-      initialValues={initialValues}
-      onSubmit={(values, { setSubmitting }) => {
-        setSubmitting(true);
-        submitData(values);
-      }}
-    >
-      {(props) => {
-        const {
-          handleChange,
-          handleSubmit,
-          values,
-          errors,
-          handleBlur,
-          touched,
-        } = props;
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Socio-academic Website Buzcamp buzcamp social media academic universities schools"
+        />
+        <meta name="og:title" content="Buzcamp" />
+        <meta
+          property="og:description"
+          content="A Socio-academic platform connecting students across various institutions"
+        />
+        <meta property="og:image" content="https://buzcamp.com/" />
+        <title>Sign Up</title>
+        <link rel="icon" href="/bzcmp.png" />
+      </Head>
 
-        return (
-          <>
-            <Head>
-              <meta
-                name="description"
-                content="Socio-academic Website Buzcamp buzcamp social media academic universities schools"
+      <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full">
+        <Header />
+        <div className="bz-ellipse"></div>
+        <div className="bz-flex bz-w-full bz-justify-center">
+          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3">
+            <Card className="bz-w-full bz-flex bz-flex-col bz-justify-center bz-items-center bz-p-2">
+              <h1 className="bz-text-3xl bz-font-black bz-text-grayScale">
+                Getting Started
+              </h1>
+              <p className="bz-text-base bz-text-grayScale bz-my-3">
+                Create an account to continue and connect with fellow students.
+              </p>
+            </Card>
+            <Card
+              className="bz-w-full bz-mt-1 bz-flex bz-flex-col bz-items-center bz-p-8"
+              variant
+              style={{ borderRadius: "20px" }}
+            >
+              <InputText
+                className="bz-w-full bz-p-3 bz-my-2 bz-rounded-md"
+                inputValue={""}
+                vModel={changeInput}
+                placeholder="Your Name"
+                variant
+                icon='smiley'
               />
-              <meta name="og:title" content="Buzcamp" />
-              <meta
-                property="og:description"
-                content="A Socio-academic platform connecting students across various institutions"
+
+              <InputText
+                className="bz-w-full bz-p-3 bz-my-2 bz-rounded-md"
+                inputValue={""}
+                vModel={changeInput}
+                placeholder="Your Email"
+                variant
+                icon='email'
               />
-              <meta property="og:image" content="https://buzcamp.com/" />
-              <title>Sign Up</title>
-              <link rel="icon" href="/bzcmp.png" />
-            </Head>
-
-            <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full">
-              <Header />
-              <div className="bz-ellipse"></div>
-              <div className="bz-flex bz-w-full bz-justify-center">
-              <Card variant="outlined" className="bz-flex bz-flex-col bz-w-1/2 bz-p-3">
-
-                </Card> 
-                </div>
-              </div>
-          </>
-        );
-      }}
-    </Formik>
+            </Card>
+          </Card>
+        </div>
+      </div>
+    </>
   );
 }
