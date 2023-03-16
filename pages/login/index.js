@@ -76,7 +76,7 @@ export default function Login() {
         payload,
         {
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
         }
       )
@@ -85,12 +85,12 @@ export default function Login() {
         setDisabled(false);
       })
       .catch((err) => {
-       // const variant = "error";
+        // const variant = "error";
         const errorMessage =
           err.message === "Network Error"
             ? err.message
             : err.response.data.message;
-          enqueueSnackbar(errorMessage, { variant: "error" });
+        enqueueSnackbar(errorMessage, { variant: "error" });
         setDisabled(false);
       });
   };

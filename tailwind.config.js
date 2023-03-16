@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -29,6 +30,7 @@ module.exports = {
         lite: "#4EA4F4",
         quantum: "#303030",
         optimaBlack: "#070707",
+        grayScale: "rgba(78, 93, 120, 1)",
       },
       backgroundColor: {
         "lightest-red": "rgba(243, 233, 233, 1)",

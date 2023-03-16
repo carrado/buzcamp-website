@@ -6,11 +6,7 @@ function MyApp({ Component, pageProps }) {
   let horizontal = "right";
 
   return (
-    <SnackbarProvider
-      maxSnack={3}
-      anchorOrigin={{ vertical, horizontal }}
-      hideIconVariant={true}
-    >
+    <SnackbarProvider>
       <Component {...pageProps} />
     </SnackbarProvider>
   );
