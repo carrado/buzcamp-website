@@ -31,6 +31,7 @@ module.exports = {
         quantum: "#303030",
         optimaBlack: "#070707",
         grayScale: "rgba(78, 93, 120, 1)",
+        primaryBlue: "#377DFF"
       },
       backgroundColor: {
         "lightest-red": "rgba(243, 233, 233, 1)",
