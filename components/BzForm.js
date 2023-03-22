@@ -211,6 +211,20 @@ export function InputRadio({ className, variant, icon, options, vModel, inputVal
     )
 }
 
+export function CheckBox({ label, className, checked, vModel }) {
+    const checkedValue = () => {
+        vModel(!checked);
+    }
+
+    return (
+        <div className={`${className} checkbox-wrapper`}>
+            <label className="bz-flex">
+                <input type="checkbox" className="bz-mr-5" checked={checked} onClick={() => checkedValue()} />
+                <span className="bz--mt-1 bz-text-grayScale">{label}</span>
+            </label>
+        </div>
+    );  
+};
 
 export function Button({ className, inputValue, disabled }) {
     return (
