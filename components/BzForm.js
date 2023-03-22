@@ -219,7 +219,7 @@ export function CheckBox({ label, className, checked, vModel }) {
     return (
         <div className={`${className} checkbox-wrapper`}>
             <label className="bz-flex">
-                <input type="checkbox" className="bz-mr-5" checked={checked} onClick={() => checkedValue()} />
+                <input type="checkbox" className="bz-mr-5" checked={checked} onChange={() => checkedValue()} />
                 <span className="bz--mt-1 bz-text-grayScale">{label}</span>
             </label>
         </div>

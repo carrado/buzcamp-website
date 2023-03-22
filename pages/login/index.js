@@ -133,7 +133,7 @@ export default function Login() {
                   </div>
                   <div className="bz-flex">
                     <span className="bz-text-base bz-text-grayScale">
-                      <Link href='forgotPassword'>Forgot Password?</Link>
+                      <Link href='forgotpassword'>Forgot Password?</Link>
                     </span>
                   </div>
                   </div>
