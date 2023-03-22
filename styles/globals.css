@@ -144,6 +144,11 @@ input {
   outline: none;
 }
 
+input:focus {
+  border-color: transparent;
+  outline: none;
+}
+
 .bz-input-border {
   border: 1px solid rgba(78, 93, 120, 0.2);
 }
