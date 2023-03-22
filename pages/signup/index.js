@@ -6,6 +6,7 @@ import Head from "next/dist/shared/lib/head";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 import BzForm, { Button, DateSelect, InputRadio, InputSelect, InputText } from "../../components/BzForm";
+import Link from "next/link";
 
 var CryptoJS = require("crypto-js");
 
@@ -168,7 +169,7 @@ export default function SignUpForm() {
       <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full gradient-bz bz-h-screen">
         <Header />
         <div className="bz-flex bz-w-full bz-justify-center">
-          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3">
+          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3 bz-mt-1">
             <Card className="bz-w-full bz-flex bz-flex-col bz-justify-center bz-items-center bz-p-2">
               <h1 className="bz-text-3xl bz-font-black bz-text-grayScale">
                 Getting Started
@@ -178,7 +179,7 @@ export default function SignUpForm() {
               </p>
             </Card>
             <Card
-              className="bz-w-full bz-mt-1 bz-flex bz-flex-col bz-items-center bz-p-4"
+              className="bz-w-full bz-mt-1 bz-flex bz-flex-col bz-items-center bz-py-4 bz-px-10 bz-mb-5 bz-mt-3"
               variant
               style={{ borderRadius: "20px" }}
             >
@@ -225,7 +226,7 @@ export default function SignUpForm() {
                 />
 
                 <div className="bz-flex">
-                  <DateSelect className="bz-w-full" vModel={changeDate} />
+                  <DateSelect className="bz-w-full bz-mr-4" vModel={changeDate} />
 
                   <InputRadio
                     className="bz-w-full bz-rounded-md"
@@ -259,11 +260,20 @@ export default function SignUpForm() {
                 />
 
                 <Button
-                  className="bz-w-full bz-p-3 bz-text-white bz-my-6 bz-rounded-md bz-bg-primaryBlue"
+                  className="bz-w-full bz-p-3 bz-text-white bz-my-6 bz-rounded-md bz-bg-blueCrayola"
                   inputValue="Sign Up"
                 />
 
               </BzForm>
+
+              <Card className='bz-flex bz-w-full bz-p-2 bz-justify-center'>
+                <span className="bz-text-base bz-text-grayScale">
+                  Already have an account? 
+                </span>
+                <span className="bz-text-base bz-text-blueCrayola bz-mx-3">
+                  <Link href='login'> Sign In</Link>
+                </span>
+              </Card>
             </Card>
           </Card>
         </div>

@@ -179,7 +179,7 @@ input {
   content: "";
   width: 12px;
   height: 12px;
-  background: #377dff;
+  background: rgba(34, 75, 218, 1);
   position: absolute;
   top: 3px;
   left: 3.3px;
@@ -196,4 +196,31 @@ input {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.1em solid rgba(78, 93, 120, 0.2);
+  outline: none;
+  cursor: pointer;
+}
+
+input:checked {
+  background-color: rgba(34, 75, 218, 1);
+  position: relative;
+}
+input:checked::before {
+  content: "\2714";
+  font-size: 1.2em;
+  color: #fff;
+  position: absolute;
+  right: -1px;
+  top: -6px;
 }
