@@ -3,6 +3,11 @@ import { useSnackbar } from "notistack";
 import OtpInput from "react18-input-otp";
 import { Cookies } from "react-cookie";
 import AppBlock from "../../components/appBlock";
+import Head from "next/head";
+import Header from "../../components/Header";
+import Card from "../../components/Card";
+import BzForm, { Button } from "../../components/BzForm";
+import Footer from "../../components/Footer";
 
 const axios = require("axios");
 
@@ -23,7 +28,6 @@ export default function VerificationPage() {
     if (event.length === 5) {
       submitOTP(event);
     } else {
-      console.log(event);
       setError(false);
     }
   };
@@ -58,7 +62,6 @@ export default function VerificationPage() {
 
   const resend = () => {
     setDisabled(true);
-
     const payload = {
       __mailKQr: CryptoJS.RabbitLegacy.encrypt(
         `${email}`,
@@ -114,68 +117,79 @@ export default function VerificationPage() {
     }
   }, []);
 
+
   return (
     <>
-      <AppBlock title="Password Reset">
-        <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full">
-          <div
-            className="bz-flex w-full bz-flex-col flex-grow bz-justify-center bz-mt-7"
-            style={{ alignItems: "center", height: "70vh" }}
-          >
-            <div className="bz-flex bz-flex-col bz-py-3 bz-text-lg bz-text-blueCrayola bz-mb-2 bz-font-bold">
-              <span
-                className="bz-my-1 bz-uppercase"
-                style={{ fontSize: "25px" }}
-              >
-                Account Verification
-              </span>
-            </div>
+      <Head>
+        <meta
+          name="description"
+          content="Socio-academic Website Buzcamp buzcamp social media academic universities schools"
+        />
+        <meta name="og:title" content="Buzcamp" />
+        <meta
+          property="og:description"
+          content="A Socio-academic platform connecting students across various institutions"
+        />
+        <meta property="og:image" content="https://buzcamp.com/" />
+        <title>Account Verification</title>
+        <link rel="icon" href="/bzcmp.png" />
+      </Head>
 
-            <div className="bz-flex bz-flex-col bz-w-3/4 bz-mb-4 bz-font-semibold">
-              <p className="bz-w-full">
+      <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full gradient-bz bz-h-screen">
+        <Header />
+        <div className="bz-flex bz-w-full bz-justify-center">
+          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3 bz-mt-3">
+            <Card className="bz-w-full bz-flex bz-flex-col bz-justify-center bz-items-center bz-p-2">
+              <h1 className="bz-text-3xl bz-font-black bz-text-grayScale">
+                Account Verification
+              </h1>
+              <p className="bz-text-base bz-text-grayScale bz-my-3">
                 Enter the confirmation code sent to your email address to
                 activate account.
               </p>
-            </div>
+            </Card>
+            <Card
+              className="bz-w-full bz-mt-3 bz-flex bz-flex-col bz-items-center bz-py-4 bz-px-10 bz-mb-5"
+              variant
+              style={{ borderRadius: "20px" }}
+            >
+              <BzForm onSubmit={resend}>
 
-            <div className="bz-flex bz-w-full bz-justify-center bz-mt-4">
-              <OtpInput
-                value={OTP}
-                onChange={changeOTP}
-                className="inputStyle"
-                numInputs={5}
-                separator={<span>-</span>}
-              />
-            </div>
+                <Card className='bz-px-3'>
+                  <OtpInput
+                    value={OTP}
+                    onChange={changeOTP}
+                    className="inputStyle"
+                    numInputs={5}
+                    separator={<span>-</span>}
+                  />
+                </Card>
 
-            <div className="bz-flex bz-w-3/4 bz-justify-center bz-mt-7">
-              <span
-                className="bz-text-base"
-                style={{ letterSpacing: "0.03em" }}
-              >
-                Make sure you input the OTP correctly. Check your spam folder if
-                you can’t find the verification email in your inbox. Otherwise,
-                click on “Resend Verification Code” below to get another
-                confirmation code.
-              </span>
-            </div>
+                <div className="bz-flex bz-w-full bz-px-5 bz-justify-center bz-mt-7">
+                  <span
+                    className="bz-text-base"
+                    style={{ letterSpacing: "0.03em" }}
+                  >
+                    Make sure you input the OTP correctly. Check your spam folder if
+                    you can’t find the verification email in your inbox. Otherwise,
+                    click on “Resend Verification Code” below to get another
+                    confirmation code.
+                  </span>
+                </div>
 
-            <div className="bz-flex bz-w-full bz-justify-center bz-mt-7">
-              <div className="bz-w-auto bz-flex bz-justify-center">
-                <button
-                  style={{ border: "2px solid #ffffff" }}
-                  className={`bz-bg-primary-black bz-text-white bz-rounded-3xl bz-font-bold bz-py-2 bz-px-16`}
-                  type="submit"
-                  onClick={resend}
+                <Button
+                  className="bz-w-full bz-p-3 bz-text-white bz-my-6 bz-rounded-md bz-bg-blueCrayola"
+                  inputValue="Resend Verification code"
                   disabled={disableBtn}
-                >
-                  Resend Verification code
-                </button>
-              </div>
-            </div>
-          </div>
+                />
+
+              </BzForm>
+
+            </Card>
+          </Card>
         </div>
-      </AppBlock>
+        <Footer />
+      </div>
     </>
   );
 }

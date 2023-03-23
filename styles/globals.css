@@ -144,9 +144,11 @@ input {
   outline: none;
 }
 
-input:focus {
-  border-color: transparent;
-  outline: none;
+@-moz-document url-prefix() {
+  input:focus {
+    border-color: transparent;
+    outline: none;
+  }
 }
 
 .bz-input-border {

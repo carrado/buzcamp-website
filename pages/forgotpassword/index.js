@@ -4,8 +4,9 @@ import { useSnackbar } from "notistack";
 import Head from "next/dist/shared/lib/head";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
-import BzForm, { Button, CheckBox, InputText } from "../../components/BzForm";
+import BzForm, { Button, InputText } from "../../components/BzForm";
 import Image from "next/image";
+import Footer from "../../components/Footer";
 
 var CryptoJS = require("crypto-js");
 
@@ -74,7 +75,7 @@ export default function ForgotPassword() {
       <div className="bz-flex bz-flex-col bz-flex-grow bz-w-full gradient-bz bz-h-screen">
         <Header />
         <div className="bz-flex bz-w-full bz-justify-center">
-          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3 bz-mt-1">
+          <Card className="bz-flex bz-flex-col bz-w-2/5 bz-p-3 bz-mt-3">
             <Card className="bz-w-full bz-flex bz-flex-col bz-justify-center bz-items-center bz-p-2">
               <h1 className="bz-text-3xl bz-font-black bz-text-grayScale">
                 Forgot password?
@@ -120,6 +121,7 @@ export default function ForgotPassword() {
             </Card>
           </Card>
         </div>
+        <Footer />
       </div>
     </>
   );

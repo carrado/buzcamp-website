@@ -5,11 +5,9 @@ import { SnackbarProvider } from "notistack";
 //axios.get(`${process.env.NEXT_PUBLIC_BUZCAMP_APP_ALLY}/locator/bznai`);
 
 function MyApp({ Component, pageProps }) {
-  let vertical = "top";
-  let horizontal = "right";
 
   return (
-    <SnackbarProvider>
+    <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
       <Component {...pageProps} />
     </SnackbarProvider>
   );
