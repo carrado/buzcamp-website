@@ -6,10 +6,10 @@ export default function App() {
   return (
     <>
       <BrowserView>
-        <Mobile />
+        <Home />
       </BrowserView>
       <MobileView>
-        <Home />
+        <Mobile />
       </MobileView>
     </>
   );
