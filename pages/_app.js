@@ -1,16 +1,18 @@
 import "../styles/globals.css";
 import { SnackbarProvider } from "notistack";
-//import axios from "axios";
-
-//axios.get(`${process.env.NEXT_PUBLIC_BUZCAMP_APP_ALLY}/locator/bznai`);
+import { isMobile } from 'react-device-detect';
 
 function MyApp({ Component, pageProps }) {
-
-  return (
-    <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
-      <Component {...pageProps} />
-    </SnackbarProvider>
-  );
+  if (isMobile) {
+    window.location.href = "mobile.buzcamp.com";
+  }
+  else {
+    return (
+      <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
+        <Component {...pageProps} />
+      </SnackbarProvider>
+    );
+  }
 }
 
 export default MyApp;

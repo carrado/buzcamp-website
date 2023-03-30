@@ -17,7 +17,7 @@ export default function Mobile() {
                     content="A Socio-academic platform connecting students across various institutions"
                 />
                 <meta property="og:image" content="https://buzcamp.com/" />
-                <title>Login</title>
+                <title>BuzCamp</title>
                 <link rel="icon" href="/bzcmp.png" />
             </Head>
 
