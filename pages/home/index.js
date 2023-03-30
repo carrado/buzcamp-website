@@ -1,9 +1,7 @@
-import { isMobile } from 'react-device-detect';
 import AppBlock from "../../components/appBlock";
 import BzLink from "../../components/BzLink";
 
 export default function Home() {
-  if (!isMobile) {
     return (
       <>
         <AppBlock title="BuzCamp">
@@ -77,14 +75,4 @@ export default function Home() {
         </AppBlock>
       </>
     );
-  }
-  else {
-    return (
-      <>
-        <div className='bz-w-full bz-flex'>
-          Redirecting...
-        </div>
-      </>
-    )
-  }
 }
