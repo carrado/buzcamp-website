@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }) {
     || navigator.userAgent.match(/iPad/i)
     || navigator.userAgent.match(/iPod/i)
     || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)) {    
+    || navigator.userAgent.match(/Windows Phone/i)) {
+    window.location.href = "https://mobile.buzcamp.com"
   } else {
     return (
       <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
