@@ -11,7 +11,8 @@ function MyApp({ Component, pageProps }) {
       || window.navigator.userAgent.match(/iPod/i)
       || window.navigator.userAgent.match(/BlackBerry/i)
       || window.navigator.userAgent.match(/Windows Phone/i)) {
-      window.location.href = "https://mobile.buzcamp.com";
+      // window.location.href = "https://mobile.buzcamp.com";
+      window.location.href = "https://delicate-semolina-e1a6a1.netlify.app/"
     }
     else {
       desktopView = true;
