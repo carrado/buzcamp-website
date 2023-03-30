@@ -1,18 +1,30 @@
 import "../styles/globals.css";
 import { SnackbarProvider } from "notistack";
-import { isMobile } from 'react-device-detect';
 
 function MyApp({ Component, pageProps }) {
-  if (isMobile) {
-    window.location.href = "https://mobile.buzcamp.com";
+  let desktopView = false;
+  if (typeof window !== 'undefined') {
+    if (window.navigator.userAgent.match(/Android/i)
+      || window.navigator.userAgent.match(/webOS/i)
+      || window.navigator.userAgent.match(/iPhone/i)
+      || window.navigator.userAgent.match(/iPad/i)
+      || window.navigator.userAgent.match(/iPod/i)
+      || window.navigator.userAgent.match(/BlackBerry/i)
+      || window.navigator.userAgent.match(/Windows Phone/i)) {
+      window.location.href = "https://mobile.buzcamp.com";
+    }
+    else {
+      desktopView = true;
+    }
   }
-  else {
-    return (
-      <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
-        <Component {...pageProps} />
-      </SnackbarProvider>
-    );
-  }
+
+  if(desktopView) {
+      return (
+        <SnackbarProvider anchorOrigin={{ horizontal: 'right', vertical: 'top' }}>
+          <Component {...pageProps} />
+        </SnackbarProvider>
+      );
+    }
 }
 
 export default MyApp;
