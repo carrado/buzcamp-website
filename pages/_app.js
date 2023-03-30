@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 
 function MyApp({ Component, pageProps }) {
   if (isMobile) {
-    window.location.href = "mobile.buzcamp.com";
+    window.location.href = "https://mobile.buzcamp.com";
   }
   else {
     return (
